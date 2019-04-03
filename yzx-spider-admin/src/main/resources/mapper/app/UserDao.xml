@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.app.dao.UserDao">
+
+	<select id="selectUserList" resultType="xin.tianchuang.modules.sys.entity.SysUserEntity">
+		SELECT * FROM tb_user WHERE 1=1
+	</select>
+	
+</mapper>

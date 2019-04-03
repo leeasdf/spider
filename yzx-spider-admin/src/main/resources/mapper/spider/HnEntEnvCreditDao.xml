@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.HnEntEnvCreditDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.HnEntEnvCreditEntity" id="hnEntEnvCreditMap">
+        <result property="id" column="id"/>
+        <result property="enterpriseId" column="enterprise_id"/>
+        <result property="entName" column="ent_name"/>
+        <result property="comName" column="com_name"/>
+        <result property="areaId" column="area_id"/>
+        <result property="areaName" column="area_name"/>
+        <result property="rowno" column="rowno"/>
+        <result property="comType" column="com_type"/>
+        <result property="ext1" column="ext1"/>
+        <result property="years" column="years"/>
+        <result property="result3RId" column="result3_r_id"/>
+        <result property="result3" column="result3"/>
+        <result property="result4RId" column="result4_r_id"/>
+        <result property="result4" column="result4"/>
+        <result property="result5RId" column="result5_r_id"/>
+        <result property="result5" column="result5"/>
+        <result property="result6RId" column="result6_r_id"/>
+        <result property="result6" column="result6"/>
+        <result property="dataSource" column="data_source"/>
+        <result property="creator" column="creator"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updater" column="updater"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="dataState" column="data_state"/>
+    </resultMap>
+
+
+</mapper>

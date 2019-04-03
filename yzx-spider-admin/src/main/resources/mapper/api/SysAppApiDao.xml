@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.api.dao.SysAppApiDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+	<resultMap type="xin.tianchuang.modules.api.entity.SysAppApiEntity"
+		id="sysAppApiMap">
+		<result property="id" column="id" />
+		<result property="appId" column="app_id" />
+		<result property="apiId" column="api_id" />
+		<result property="updateTime" column="update_time" />
+		<result property="createTime" column="create_time" />
+		<result property="status" column="status" />
+	</resultMap>
+
+	<select id="queryInfoByApiIdAndAppId" resultType="xin.tianchuang.modules.api.entity.SysAppApiEntity">
+		select * from
+		sys_app_api where api_id = #{apiId} and
+		app_id = #{appId}
+	</select>
+
+	<delete id="deleteBatch">
+		delete from sys_app_api where app_id in
+		<foreach item="appId" collection="array" open="(" separator="," close=")">
+			#{appId}
+		</foreach>
+	</delete>
+
+</mapper>

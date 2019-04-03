@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>工商基本信息</title>
+		<#include "/header.html">
+</head>
+<body>
+<div id="rrapp" v-cloak>
+    <div v-show="showList">
+        <div class="grid-btn">
+			<#if shiro.hasPermission("sys:rpttnbasicinfo:save")>
+            <a class="btn btn-primary" @click="add"><i class="fa fa-plus"></i>&nbsp;新增</a>
+			</#if>
+			<#if shiro.hasPermission("sys:rpttnbasicinfo:update")>
+            <a class="btn btn-primary" @click="update"><i class="fa fa-pencil-square-o"></i>&nbsp;修改</a>
+			</#if>
+			<#if shiro.hasPermission("sys:rpttnbasicinfo:delete")>
+            <a class="btn btn-primary" @click="del"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
+			</#if>
+        </div>
+        <table id="jqGrid"></table>
+        <div id="jqGridPager"></div>
+    </div>
+
+    <div v-show="!showList" class="panel panel-default">
+        <div class="panel-heading">{{title}}</div>
+        <form class="form-horizontal">
+														                    <div class="form-group">
+                        <div class="col-sm-2 control-label">企业主键</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.enterpriseId" placeholder="企业主键"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">企业名称</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.entName" placeholder="企业名称"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">工商注册号</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.regNo" placeholder="工商注册号"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">公司类型</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.entType" placeholder="公司类型"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">行业</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.industryPhyName" placeholder="行业"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">纳税人识别号</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.ideNum" placeholder="纳税人识别号"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">统一信用代码</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.creCode" placeholder="统一信用代码"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">英文名称</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.engName" placeholder="英文名称"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">组织机构代码</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.orgCode" placeholder="组织机构代码"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">登记机关</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.regAuthority" placeholder="登记机关"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">营业期限</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.opePeriod" placeholder="营业期限"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">核准日期</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.appDate" placeholder="核准日期"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">注册地址</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.regAddress" placeholder="注册地址"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label"></div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.busScope" placeholder=""/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">公司名称</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.cmpName" placeholder="公司名称"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">注册时间</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.regTime" placeholder="注册时间"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">法人姓名</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.legalPerson" placeholder="法人姓名"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">注册资本</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.regCap" placeholder="注册资本"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">公司状态</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.status" placeholder="公司状态"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">创建人ID</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.creator" placeholder="创建人ID"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">创建时间</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.createTime" placeholder="创建时间"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">修改人ID</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.updater" placeholder="修改人ID"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">修改时间</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.updateTime" placeholder="修改时间"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">数据状态：1-正常 0-删除</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnBasicInfo.dataState" placeholder="数据状态：1-正常 0-删除"/>
+                        </div>
+                    </div>
+							            <div class="form-group">
+                <div class="col-sm-2 control-label"></div>
+                <input type="button" class="btn btn-primary" @click="saveOrUpdate" value="确定"/>
+                &nbsp;&nbsp;<input type="button" class="btn btn-warning" @click="reload" value="返回"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="${request.contextPath}/statics/js/modules/sys/rpttnbasicinfo.js?_${.now?long}"></script>
+</body>
+</html>

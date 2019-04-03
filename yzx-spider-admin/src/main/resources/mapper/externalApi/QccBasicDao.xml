@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.externalApi.qichacha.dao.QccBasicDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.externalApi.qichacha.entity.QccBasicEntity" id="qccBasicMap">
+        <result property="id" column="id"/>
+        <result property="entName" column="ent_name"/>
+        <result property="no" column="no"/>
+        <result property="belongOrg" column="belong_org"/>
+        <result property="operName" column="oper_name"/>
+        <result property="startDate" column="start_date"/>
+        <result property="endDate" column="end_date"/>
+        <result property="status" column="status"/>
+        <result property="province" column="province"/>
+        <result property="updatedDate" column="updated_date"/>
+        <result property="creditCode" column="credit_code"/>
+        <result property="registCapi" column="regist_capi"/>
+        <result property="econKind" column="econ_kind"/>
+        <result property="address" column="address"/>
+        <result property="scope" column="scope"/>
+        <result property="termStart" column="term_start"/>
+        <result property="teamEnd" column="team_end"/>
+        <result property="checkDate" column="check_date"/>
+        <result property="orgNo" column="org_no"/>
+        <result property="isOnStock" column="is_on_stock"/>
+        <result property="stockNumber" column="stock_number"/>
+        <result property="stockType" column="stock_type"/>
+        <result property="imageUrl" column="image_url"/>
+        <result property="dataStatus" column="data_status"/>
+        <result property="createTime" column="create_time"/>
+        <result property="creator" column="creator"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="updater" column="updater"/>
+    </resultMap>
+
+
+</mapper>

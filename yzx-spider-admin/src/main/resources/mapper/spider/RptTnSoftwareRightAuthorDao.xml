@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.RptTnSoftwareRightAuthorDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.RptTnSoftwareRightAuthorEntity" id="rptTnSoftwareRightAuthorMap">
+        <result property="id" column="id"/>
+        <result property="enterpriseId" column="enterprise_id"/>
+        <result property="entAme" column="ent_ame"/>
+        <result property="fullname" column="fullname"/>
+        <result property="simplename" column="simplename"/>
+        <result property="regnum" column="regnum"/>
+        <result property="catnum" column="catnum"/>
+        <result property="version" column="version"/>
+        <result property="authorNationality" column="author_nationality"/>
+        <result property="publishtime" column="publishtime"/>
+        <result property="regtime" column="regtime"/>
+        <result property="creator" column="creator"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updater" column="updater"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="dataState" column="data_state"/>
+    </resultMap>
+
+
+</mapper>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.dataparser.dao.CredithunanAdministrativePenaltyDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.dataparser.entity.CredithunanAdministrativePenaltyEntity" id="credithunanAdministrativePenaltyMap">
+        <result property="id" column="id"/>
+        <result property="caseName" column="case_name"/>
+        <result property="caseNo" column="case_no"/>
+        <result property="caseObject" column="case_object"/>
+        <result property="representative" column="representative"/>
+        <result property="lowDepartment" column="low_department"/>
+        <result property="punishmentDate" column="punishment_date"/>
+        <result property="content" column="content"/>
+        <result property="issueDate" column="issue_date"/>
+        <result property="spiderId" column="spider_id"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="remark" column="remark"/>
+        <result property="version" column="version"/>
+        <result property="dataStatus" column="data_status"/>
+    </resultMap>
+
+
+</mapper>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.RptTnOwingTaxDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.RptTnOwingTaxEntity" id="rptTnOwingTaxMap">
+        <result property="id" column="id"/>
+        <result property="enterpriseId" column="enterprise_id"/>
+        <result property="entName" column="ent_name"/>
+        <result property="publicDate" column="public_date"/>
+        <result property="taxNo" column="tax_no"/>
+        <result property="oweTaxType" column="owe_tax_type"/>
+        <result property="currentOweTaxAmount" column="current_owe_tax_amount"/>
+        <result property="ownTaxBalance" column="own_tax_balance"/>
+        <result property="taxDepart" column="tax_depart"/>
+        <result property="creator" column="creator"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updater" column="updater"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="dataState" column="data_state"/>
+    </resultMap>
+
+
+</mapper>

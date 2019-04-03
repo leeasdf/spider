@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.EntHighTechVerifyInfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.EntHighTechVerifyInfoEntity" id="entHighTechVerifyInfoMap">
+        <result property="id" column="id"/>
+        <result property="enterpriseName" column="enterprise_name"/>
+        <result property="originEnterpriseName" column="origin_enterprise_name"/>
+        <result property="batch" column="batch"/>
+        <result property="verifyYear" column="verify_year"/>
+        <result property="type" column="type"/>
+        <result property="certno" column="certno"/>
+        <result property="approvalNo" column="approval_no"/>
+        <result property="publicDate" column="public_date"/>
+        <result property="issueDate" column="issue_date"/>
+        <result property="changeType" column="change_type"/>
+        <result property="remark" column="remark"/>
+    </resultMap>
+
+
+</mapper>

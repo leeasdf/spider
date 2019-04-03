@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.CsSfgwTaxBasicDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.CsSfgwTaxBasicEntity" id="csSfgwTaxBasicMap">
+        <result property="isinvalid" column="ISINVALID"/>
+        <result property="lastdate" column="LASTDATE"/>
+        <result property="organizationcode" column="ORGANIZATIONCODE"/>
+        <result property="corporationname" column="CORPORATIONNAME"/>
+        <result property="businesslicense" column="BUSINESSLICENSE"/>
+        <result property="taxcode" column="TAXCODE"/>
+        <result property="legalrepresentative" column="LEGALREPRESENTATIVE"/>
+        <result property="legalrepresentativeidcard" column="LEGALREPRESENTATIVEIDCARD"/>
+        <result property="registeraddress" column="REGISTERADDRESS"/>
+        <result property="businessaddress" column="BUSINESSADDRESS"/>
+        <result property="businessmode" column="BUSINESSMODE"/>
+        <result property="contactphone" column="CONTACTPHONE"/>
+        <result property="taxstatecode" column="TAXSTATECODE"/>
+        <result property="taxdeptcode" column="TAXDEPTCODE"/>
+        <result property="issuedate" column="ISSUEDATE"/>
+        <result property="taxregisterdate" column="TAXREGISTERDATE"/>
+        <result property="registertype" column="REGISTERTYPE"/>
+        <result property="deadlineofbusiness" column="DEADLINEOFBUSINESS"/>
+        <result property="capital" column="CAPITAL"/>
+        <result property="capitalcode" column="CAPITALCODE"/>
+        <result property="taxbankcode" column="TAXBANKCODE"/>
+        <result property="taxbanknodecode" column="TAXBANKNODECODE"/>
+        <result property="taxbankcard" column="TAXBANKCARD"/>
+        <result property="zjid" column="ZJID"/>
+    </resultMap>
+
+
+</mapper>

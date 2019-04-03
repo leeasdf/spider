@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.dataparser.dao.CreditchinaPubPenaltyDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.dataparser.entity.CreditchinaPubPenaltyEntity" id="creditchinaPubPenaltyMap">
+        <result property="id" column="id"/>
+        <result property="areaCode" column="area_code"/>
+        <result property="cfBz" column="cf_bz"/>
+        <result property="cfCflb1" column="cf_cflb1"/>
+        <result property="cfCflb2" column="cf_cflb2"/>
+        <result property="cfCfmc" column="cf_cfmc"/>
+        <result property="cfDfbm" column="cf_dfbm"/>
+        <result property="cfFr" column="cf_fr"/>
+        <result property="cfJdrq" column="cf_jdrq"/>
+        <result property="cfJg" column="cf_jg"/>
+        <result property="cfQx" column="cf_qx"/>
+        <result property="cfSjc" column="cf_sjc"/>
+        <result property="cfSy" column="cf_sy"/>
+        <result property="cfWsh" column="cf_wsh"/>
+        <result property="cfXdrGsdj" column="cf_xdr_gsdj"/>
+        <result property="cfXdrMc" column="cf_xdr_mc"/>
+        <result property="cfXdrSfz" column="cf_xdr_sfz"/>
+        <result property="cfXdrShxym" column="cf_xdr_shxym"/>
+        <result property="cfXdrSwdj" column="cf_xdr_swdj"/>
+        <result property="cfXdrZdm" column="cf_xdr_zdm"/>
+        <result property="cfXzbm" column="cf_xzbm"/>
+        <result property="cfXzjg" column="cf_xzjg"/>
+        <result property="cfYj" column="cf_yj"/>
+        <result property="cfZt" column="cf_zt"/>
+        <result property="fileId" column="file_id"/>
+        <result property="fingerPrint" column="finger_print"/>
+        <result property="pv" column="pv"/>
+        <result property="roleId" column="role_id"/>
+        <result property="subjectId" column="subject_id"/>
+        <result property="uploadDate" column="upload_date"/>
+        <result property="spiderId" column="spider_id"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="remark" column="remark"/>
+        <result property="dataStatus" column="data_status"/>
+    </resultMap>
+
+
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.EntHighTechBlackInfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.EntHighTechBlackInfoEntity" id="entHighTechBlackInfoMap">
+        <result property="id" column="id"/>
+        <result property="memId" column="mem_id"/>
+        <result property="enterpriseId" column="enterprise_id"/>
+        <result property="reason" column="reason"/>
+        <result property="sourceDepartment" column="source_department"/>
+        <result property="remarks" column="remarks"/>
+        <result property="blackRollName" column="black_roll_name"/>
+        <result property="company" column="company"/>
+        <result property="date" column="date"/>
+    </resultMap>
+
+
+</mapper>

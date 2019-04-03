@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.RptTnReportSocialDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.RptTnReportSocialEntity" id="rptTnReportSocialMap">
+        <result property="id" column="id"/>
+        <result property="enterpriseId" column="enterprise_id"/>
+        <result property="entName" column="ent_name"/>
+        <result property="reportId" column="report_id"/>
+        <result property="injuryRadix" column="injury_radix"/>
+        <result property="injuryNum" column="injury_num"/>
+        <result property="injuryAmount" column="injury_amount"/>
+        <result property="unemployAmount" column="unemploy_amount"/>
+        <result property="medicalnsureOweAmount" column="medicalnsure_owe_amount"/>
+        <result property="oldAgeAmount" column="old_age_amount"/>
+        <result property="oldAgeNum" column="old_age_num"/>
+        <result property="unemployNum" column="unemploy_num"/>
+        <result property="medicalNum" column="medical_num"/>
+        <result property="maternityNum" column="maternity_num"/>
+        <result property="maternityRadix" column="maternity_radix"/>
+        <result property="injuryinsureOweAmount" column="injuryinsure_owe_amount"/>
+        <result property="oldAgeRadix" column="old_age_radix"/>
+        <result property="oldAgelnsureOweAmount" column="old_agelnsure_owe_amount"/>
+        <result property="medicalAmount" column="medical_amount"/>
+        <result property="unemployRadix" column="unemploy_radix"/>
+        <result property="maternityInsureOweAmount" column="maternity_insure_owe_amount"/>
+        <result property="maternityAmount" column="maternity_amount"/>
+        <result property="unemploylnsureOweAmount" column="unemploylnsure_owe_amount"/>
+        <result property="medicalRadix" column="medical_radix"/>
+        <result property="creator" column="creator"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updater" column="updater"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="dataState" column="data_state"/>
+    </resultMap>
+
+
+</mapper>

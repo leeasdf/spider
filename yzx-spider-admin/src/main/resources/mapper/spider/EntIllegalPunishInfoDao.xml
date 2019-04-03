@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.EntIllegalPunishInfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.EntIllegalPunishInfoEntity" id="entIllegalPunishInfoMap">
+        <result property="id" column="id"/>
+        <result property="memId" column="mem_id"/>
+        <result property="publicId" column="public_id"/>
+        <result property="partyName" column="party_name"/>
+        <result property="illegact" column="illegact"/>
+        <result property="punishdesicion" column="punishdesicion"/>
+        <result property="quabasisText" column="quabasis_text"/>
+        <result property="pendesissDate" column="pendesiss_date"/>
+        <result property="bsjgText" column="bsjg_text"/>
+        <result property="enterpriseId" column="enterprise_id"/>
+    </resultMap>
+
+
+</mapper>

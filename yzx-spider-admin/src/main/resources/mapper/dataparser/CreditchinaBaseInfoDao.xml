@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.dataparser.dao.CreditchinaBaseInfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.dataparser.entity.CreditchinaBaseInfoEntity" id="creditchinaBaseInfoMap">
+        <result property="id" column="id"/>
+        <result property="creditCode" column="credit_code"/>
+        <result property="entName" column="ent_name"/>
+        <result property="dom" column="dom"/>
+        <result property="enttype" column="enttype"/>
+        <result property="esdate" column="esdate"/>
+        <result property="legal" column="legal"/>
+        <result property="organizationCode" column="organization_code"/>
+        <result property="regcap" column="regcap"/>
+        <result property="regno" column="regno"/>
+        <result property="regorg" column="regorg"/>
+        <result property="revdate" column="revdate"/>
+        <result property="validtime" column="validTime"/>
+        <result property="taxCode" column="tax_code"/>
+        <result property="apprdate" column="apprdate"/>
+        <result property="area" column="area"/>
+        <result property="badCount" column="bad_count"/>
+        <result property="candate" column="candate"/>
+        <result property="cfCount" column="cf_count"/>
+        <result property="dishonestyCount" column="dishonesty_count"/>
+        <result property="entstatus" column="entstatus"/>
+        <result property="goodCount" column="good_count"/>
+        <result property="idcard" column="idCard"/>
+        <result property="opfrom" column="opfrom"/>
+        <result property="opscope" column="opscope"/>
+        <result property="opto" column="opto"/>
+        <result property="otherCount" column="other_count"/>
+        <result property="rank" column="rank"/>
+        <result property="solrStatus" column="solr_status"/>
+        <result property="source" column="source"/>
+        <result property="sysUpdateTime" column="sys_update_time"/>
+        <result property="xkCount" column="xk_count"/>
+        <result property="spiderId" column="spider_id"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="remark" column="remark"/>
+        <result property="dataStatus" column="data_status"/>
+    </resultMap>
+
+
+</mapper>

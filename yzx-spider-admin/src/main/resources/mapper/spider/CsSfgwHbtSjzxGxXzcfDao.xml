@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.CsSfgwHbtSjzxGxXzcfDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.CsSfgwHbtSjzxGxXzcfEntity" id="csSfgwHbtSjzxGxXzcfMap">
+        <result property="isinvalid" column="ISINVALID"/>
+        <result property="lastdate" column="LASTDATE"/>
+        <result property="xh" column="XH"/>
+        <result property="wrybh" column="WRYBH"/>
+        <result property="wrymc" column="WRYMC"/>
+        <result property="nd" column="ND"/>
+        <result property="cfzt" column="CFZT"/>
+        <result property="dcjg" column="DCJG"/>
+        <result property="lah" column="LAH"/>
+        <result property="jdswh" column="JDSWH"/>
+        <result property="larq" column="LARQ"/>
+        <result property="aqjj" column="AQJJ"/>
+        <result property="zywfxw" column="ZYWFXW"/>
+        <result property="cfyj" column="CFYJ"/>
+        <result property="cfzl" column="CFZL"/>
+        <result property="fkse" column="FKSE"/>
+        <result property="xzmlzl" column="XZMLZL"/>
+        <result property="sfjxtz" column="SFJXTZ"/>
+        <result property="jdxdrq" column="JDXDRQ"/>
+        <result property="jdsnr" column="JDSNR"/>
+        <result property="zxqk" column="ZXQK"/>
+        <result property="zxwbrq" column="ZXWBRQ"/>
+        <result property="fyjg" column="FYJG"/>
+        <result property="ssjg" column="SSJG"/>
+        <result property="ysxx" column="YSXX"/>
+        <result property="jarq" column="JARQ"/>
+        <result property="sfja" column="SFJA"/>
+        <result property="ajh" column="AJH"/>
+        <result property="bz" column="BZ"/>
+        <result property="cjsj" column="CJSJ"/>
+        <result property="xgsj" column="XGSJ"/>
+        <result property="sjly" column="SJLY"/>
+        <result property="zt" column="ZT"/>
+        <result property="sfyjh" column="SFYJH"/>
+        <result property="shzt" column="SHZT"/>
+        <result property="tyshxydm" column="TYSHXYDM"/>
+        <result property="zcjdxgcl" column="ZCJDXGCL"/>
+        <result property="wfajlx" column="WFAJLX"/>
+        <result property="xyhnDbTime" column="XYHN_DB_TIME"/>
+        <result property="zjid" column="ZJID"/>
+    </resultMap>
+
+
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.OriEnvironmentalPenaltyDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.OriEnvironmentalPenaltyEntity" id="oriEnvironmentalPenaltyMap">
+        <result property="id" column="id"/>
+        <result property="area" column="area"/>
+        <result property="lawDepartment" column="law_department"/>
+        <result property="docNumber" column="doc_number"/>
+        <result property="enterpriseName" column="enterprise_name"/>
+        <result property="dealDate" column="deal_date"/>
+        <result property="result" column="result"/>
+        <result property="reason" column="reason"/>
+        <result property="situation" column="situation"/>
+    </resultMap>
+
+
+</mapper>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.CsSfgwHbtCcproductionauditDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.CsSfgwHbtCcproductionauditEntity" id="csSfgwHbtCcproductionauditMap">
+        <result property="isinvalid" column="ISINVALID"/>
+        <result property="lastdate" column="LASTDATE"/>
+        <result property="corporationname" column="CORPORATIONNAME"/>
+        <result property="organizationcode" column="ORGANIZATIONCODE"/>
+        <result property="placeofregistration" column="PLACEOFREGISTRATION"/>
+        <result property="nature" column="NATURE"/>
+        <result property="industry" column="INDUSTRY"/>
+        <result property="releasemechanism" column="RELEASEMECHANISM"/>
+        <result property="releasedate" column="RELEASEDATE"/>
+        <result property="documentnumber" column="DOCUMENTNUMBER"/>
+        <result property="executiontimelimit" column="EXECUTIONTIMELIMIT"/>
+        <result property="auditdate" column="AUDITDATE"/>
+        <result property="completedacceptancetime" column="COMPLETEDACCEPTANCETIME"/>
+        <result property="finishtime" column="FINISHTIME"/>
+        <result property="auditorganizationname" column="AUDITORGANIZATIONNAME"/>
+        <result property="acceptanceproofmaterial" column="ACCEPTANCEPROOFMATERIAL"/>
+        <result property="productionaudit" column="PRODUCTIONAUDIT"/>
+        <result property="praccetime" column="PRACCETIME"/>
+        <result property="zjid" column="ZJID"/>
+    </resultMap>
+
+
+</mapper>

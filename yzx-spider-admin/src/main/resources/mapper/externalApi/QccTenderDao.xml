@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.externalApi.qichacha.dao.QccTenderDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.externalApi.qichacha.entity.QccTenderEntity" id="qccTenderMap">
+        <result property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="pubdate" column="pubdate"/>
+        <result property="provinceName" column="province_name"/>
+        <result property="channelName" column="channel_name"/>
+        <result property="entName" column="ent_name"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="remark" column="remark"/>
+        <result property="version" column="version"/>
+        <result property="dataStatus" column="data_status"/>
+    </resultMap>
+
+    <update id="updateDataStatusByEntName" >
+        UPDATE qcc_tender set  data_status=#{dataStatus} where ent_name = #{entName};
+    </update>
+</mapper>

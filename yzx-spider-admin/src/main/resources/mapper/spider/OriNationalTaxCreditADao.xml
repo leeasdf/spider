@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.OriNationalTaxCreditADao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.OriNationalTaxCreditAEntity" id="oriNationalTaxCreditAMap">
+        <result property="id" column="id"/>
+        <result property="taxNumber" column="tax_number"/>
+        <result property="enterpriseName" column="enterprise_name"/>
+        <result property="year" column="year"/>
+        <result property="taxAuthorities" column="tax_authorities"/>
+    </resultMap>
+
+
+</mapper>

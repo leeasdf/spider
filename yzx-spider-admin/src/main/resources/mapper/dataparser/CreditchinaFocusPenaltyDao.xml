@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.dataparser.dao.CreditchinaFocusPenaltyDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.dataparser.entity.CreditchinaFocusPenaltyEntity" id="creditchinaFocusPenaltyMap">
+        <result property="id" column="id"/>
+        <result property="punishmentDate" column="punishment_date"/>
+        <result property="punishmentObject" column="punishment_object"/>
+        <result property="punishmentDepart" column="punishment_depart"/>
+        <result property="punishmentOrgan" column="punishment_organ"/>
+        <result property="type" column="type"/>
+        <result property="punishmentName" column="punishment_name"/>
+        <result property="lastUpdateTime" column="last_update_time"/>
+        <result property="penaltyDecision" column="penalty_decision"/>
+        <result property="source" column="source"/>
+        <result property="informationType" column="information_type"/>
+        <result property="punishmentContent" column="punishment_content"/>
+        <result property="punishmentType" column="punishment_type"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="remark" column="remark"/>
+        <result property="dataStatus" column="data_status"/>
+    </resultMap>
+
+
+</mapper>

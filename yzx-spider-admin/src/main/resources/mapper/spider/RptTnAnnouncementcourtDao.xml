@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.RptTnAnnouncementcourtDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.RptTnAnnouncementcourtEntity" id="rptTnAnnouncementcourtMap">
+        <result property="id" column="id"/>
+        <result property="enterpriseId" column="enterprise_id"/>
+        <result property="entName" column="ent_name"/>
+        <result property="startDate" column="start_date"/>
+        <result property="plaintiff" column="plaintiff"/>
+        <result property="defendant" column="defendant"/>
+        <result property="caseReason" column="case_reason"/>
+        <result property="creator" column="creator"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updater" column="updater"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="dataState" column="data_state"/>
+        <result property="courtroom" column="courtroom"/>
+        <result property="caseNo" column="case_no"/>
+        <result property="court" column="court"/>
+        <result property="aId" column="a_id"/>
+        <result property="searchType" column="search_type"/>
+        <result property="litigant" column="litigant"/>
+        <result property="type" column="type"/>
+        <result property="connList" column="conn_list"/>
+        <result property="contractors" column="contractors"/>
+        <result property="eventTime" column="event_time"/>
+    </resultMap>
+
+
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.XylgTaxpayerCreditResultDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.XylgTaxpayerCreditResultEntity" id="xylgTaxpayerCreditResultMap">
+        <result property="id" column="id"/>
+        <result property="taxpayerName" column="taxpayer_name"/>
+        <result property="taxNo" column="tax_no"/>
+        <result property="creditRating" column="credit_rating"/>
+        <result property="taxAuthority" column="tax_authority"/>
+        <result property="evaluationYear" column="evaluation_year"/>
+        <result property="evaluationDate" column="evaluation_date"/>
+        <result property="dataState" column="data_state"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+
+
+</mapper>

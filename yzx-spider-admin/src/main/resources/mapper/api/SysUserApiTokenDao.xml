@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.api.dao.SysUserApiTokenDao">
+
+	<select id="getTokenByAppId"
+		resultType="xin.tianchuang.modules.api.entity.SysUserApiTokenEntity">
+		select * from sys_user_api_token where app_id = #{value}
+	</select>
+
+</mapper>

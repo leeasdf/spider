@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.EntHighTechMerchantsDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.EntHighTechMerchantsEntity" id="entHighTechMerchantsMap">
+        <result property="id" column="id"/>
+        <result property="company" column="company"/>
+        <result property="projectName" column="project_name"/>
+        <result property="note" column="note"/>
+        <result property="memId" column="mem_id"/>
+        <result property="enterpriseId" column="enterprise_id"/>
+    </resultMap>
+
+
+</mapper>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+		<#include "/header.html">
+</head>
+<body>
+<div id="rrapp" v-cloak>
+    <div v-show="showList">
+        <div class="grid-btn">
+			<#if shiro.hasPermission("sys:rpttaxinfo:save")>
+            <a class="btn btn-primary" @click="add"><i class="fa fa-plus"></i>&nbsp;新增</a>
+			</#if>
+			<#if shiro.hasPermission("sys:rpttaxinfo:update")>
+            <a class="btn btn-primary" @click="update"><i class="fa fa-pencil-square-o"></i>&nbsp;修改</a>
+			</#if>
+			<#if shiro.hasPermission("sys:rpttaxinfo:delete")>
+            <a class="btn btn-primary" @click="del"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
+			</#if>
+        </div>
+        <table id="jqGrid"></table>
+        <div id="jqGridPager"></div>
+    </div>
+
+    <div v-show="!showList" class="panel panel-default">
+        <div class="panel-heading">{{title}}</div>
+        <form class="form-horizontal">
+														                    <div class="form-group">
+                        <div class="col-sm-2 control-label">会员主键</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.memId" placeholder="会员主键"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">企业ID</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.enterpriseId" placeholder="企业ID"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">所属年度</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.year" placeholder="所属年度"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">机构代码</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.orgCode" placeholder="机构代码"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">机构代码</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.ename" placeholder="机构代码"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">营业收入</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.operRevenue" placeholder="营业收入"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">主营业务收入</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.mainOperRevenue" placeholder="主营业务收入"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">其他业务收入</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.otherOperRevenue" placeholder="其他业务收入"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">营业成本</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.operCost" placeholder="营业成本"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">主营业务成本</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.mainOperCost" placeholder="主营业务成本"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">其他业务成本</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.otherOperCost" placeholder="其他业务成本"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">营业税金及附加信息</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.busiTaxSurcharges" placeholder="营业税金及附加信息"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">管理费用</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.adminExpense" placeholder="管理费用"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">销售费用</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.operExpense" placeholder="销售费用"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">财务费用</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.financeExpense" placeholder="财务费用"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">财产减值损失</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.assetsLoss" placeholder="财产减值损失"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">营业利润</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.operProfit" placeholder="营业利润"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">营业外收入</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.nonBusiIncome" placeholder="营业外收入"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">营业外支出</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.nonBusiExpense" placeholder="营业外支出"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">利润（亏损）总额</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.totalProfitLoss" placeholder="利润（亏损）总额"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">所得税</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.persIncomeTax" placeholder="所得税"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">创建人ID</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.creator" placeholder="创建人ID"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">创建时间</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.createTime" placeholder="创建时间"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">修改人ID</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.updater" placeholder="修改人ID"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">修改时间</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.updateTime" placeholder="修改时间"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">数据状态：1-正常 0-删除</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTaxInfo.dataState" placeholder="数据状态：1-正常 0-删除"/>
+                        </div>
+                    </div>
+							            <div class="form-group">
+                <div class="col-sm-2 control-label"></div>
+                <input type="button" class="btn btn-primary" @click="saveOrUpdate" value="确定"/>
+                &nbsp;&nbsp;<input type="button" class="btn btn-warning" @click="reload" value="返回"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="${request.contextPath}/statics/js/modules/sys/rpttaxinfo.js?_${.now?long}"></script>
+</body>
+</html>

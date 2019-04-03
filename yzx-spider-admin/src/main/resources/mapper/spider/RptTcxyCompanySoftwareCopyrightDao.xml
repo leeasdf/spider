@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.RptTcxyCompanySoftwareCopyrightDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.RptTcxyCompanySoftwareCopyrightEntity" id="rptTcxyCompanySoftwareCopyrightMap">
+        <result property="id" column="id"/>
+        <result property="companyId" column="company_id"/>
+        <result property="classifyCode" column="classify_code"/>
+        <result property="version" column="version"/>
+        <result property="registerCode" column="register_code"/>
+        <result property="registerDate" column="register_date"/>
+        <result property="ownerName" column="owner_name"/>
+        <result property="fullName" column="full_name"/>
+        <result property="launchDate" column="launch_date"/>
+        <result property="shortName" column="short_name"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+
+
+</mapper>

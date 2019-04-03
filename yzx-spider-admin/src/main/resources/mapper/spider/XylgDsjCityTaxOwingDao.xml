@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.XylgDsjCityTaxOwingDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.XylgDsjCityTaxOwingEntity" id="xylgDsjCityTaxOwingMap">
+        <result property="id" column="id"/>
+        <result property="taxpayerName" column="taxpayer_name"/>
+        <result property="taxNo" column="tax_no"/>
+        <result property="legalPersonName" column="legal_person_name"/>
+        <result property="legalPersonCertNo" column="legal_person_cert_no"/>
+        <result property="businessAddress" column="business_address"/>
+        <result property="businessTaxOwing" column="business_tax_owing"/>
+        <result property="businessTaxOwingNew" column="business_tax_owing_new"/>
+        <result property="propertyTaxOwing" column="property_tax_owing"/>
+        <result property="propertyTaxOwingNew" column="property_tax_owing_new"/>
+        <result property="cityBuildTax" column="city_build_tax"/>
+        <result property="cityBuildTaxNew" column="city_build_tax_new"/>
+        <result property="educationTax" column="education_tax"/>
+        <result property="educationTaxNew" column="education_tax_new"/>
+        <result property="farmLandOccupyTax" column="farm_land_occupy_tax"/>
+        <result property="farmLandOccupyTaxNew" column="farm_land_occupy_tax_new"/>
+        <result property="landUseTax" column="land_use_tax"/>
+        <result property="landUseTaxNew" column="land_use_tax_new"/>
+        <result property="landValueAddTax" column="land_value_add_tax"/>
+        <result property="landValueAddTaxNew" column="land_value_add_tax_new"/>
+        <result property="personalIncomeTax" column="personal_income_tax"/>
+        <result property="personalIncomeTaxNew" column="personal_income_tax_new"/>
+        <result property="companyIncomeTax" column="company_income_tax"/>
+        <result property="companyIncomeTaxNew" column="company_income_tax_new"/>
+        <result property="printTax" column="print_tax"/>
+        <result property="printTaxNew" column="print_tax_new"/>
+        <result property="carShipTax" column="car_ship_tax"/>
+        <result property="carShipTaxNew" column="car_ship_tax_new"/>
+        <result property="contractTax" column="contract_tax"/>
+        <result property="contractTaxNew" column="contract_tax_new"/>
+        <result property="resourceTax" column="resource_tax"/>
+        <result property="resourceTaxNew" column="resource_tax_new"/>
+        <result property="totalTax" column="total_tax"/>
+        <result property="totalTaxNew" column="total_tax_new"/>
+        <result property="dataUpdateTime" column="data_update_time"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="dataState" column="data_state"/>
+    </resultMap>
+
+
+</mapper>

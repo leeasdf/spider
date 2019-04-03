@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.dataparser.dao.CredithunanAbnormalNoticeDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.dataparser.entity.CredithunanAbnormalNoticeEntity" id="credithunanAbnormalNoticeMap">
+        <result property="id" column="id"/>
+        <result property="taxpayer" column="taxpayer"/>
+        <result property="organizeCode" column="organize_code"/>
+        <result property="legalRepresentative" column="legal_representative"/>
+        <result property="identityCard" column="identity_card"/>
+        <result property="taxAuthority" column="tax_authority"/>
+        <result property="declarationDate" column="declaration_date"/>
+        <result property="affirmDate" column="affirm_date"/>
+        <result property="businessAddress" column="business_address"/>
+        <result property="infomationName" column="infomation_name"/>
+        <result property="source" column="source"/>
+        <result property="infomationType" column="infomation_type"/>
+        <result property="sourceTime" column="source_time"/>
+        <result property="spiderId" column="spider_id"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="remark" column="remark"/>
+        <result property="version" column="version"/>
+        <result property="dataStatus" column="data_status"/>
+    </resultMap>
+
+
+</mapper>

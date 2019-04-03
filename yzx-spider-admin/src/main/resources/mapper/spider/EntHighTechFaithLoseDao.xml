@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.EntHighTechFaithLoseDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.EntHighTechFaithLoseEntity" id="entHighTechFaithLoseMap">
+        <result property="id" column="id"/>
+        <result property="memId" column="mem_id"/>
+        <result property="infoName" column="info_name"/>
+        <result property="source" column="source"/>
+        <result property="infoType" column="info_type"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="company" column="company"/>
+        <result property="cityState" column="city_state"/>
+        <result property="districtCounty" column="district_county"/>
+        <result property="companyType" column="company_type"/>
+        <result property="evaluationYear" column="evaluation_year"/>
+        <result property="caseName" column="case_name"/>
+        <result property="punishNo" column="punish_no"/>
+        <result property="executiveRelativeName" column="executive_relative_name"/>
+        <result property="legalPerson" column="legal_person"/>
+        <result property="enforcementDept" column="enforcement_dept"/>
+        <result property="punishDate" column="punish_date"/>
+        <result property="checkedCompany" column="checked_company"/>
+        <result property="reportId" column="report_id"/>
+        <result property="checkedProductionName" column="checked_production_name"/>
+        <result property="productDate" column="product_date"/>
+        <result property="specification" column="specification"/>
+        <result property="productCompany" column="product_company"/>
+        <result property="unPassProject" column="un_pass_project"/>
+        <result property="inspectionStandard" column="inspection_standard"/>
+        <result property="inspectionResult" column="inspection_result"/>
+        <result property="standardRegulation" column="standard_regulation"/>
+        <result property="inspectionOrganization" column="inspection_organization"/>
+        <result property="checkDate" column="check_date"/>
+        <result property="checkDept" column="check_dept"/>
+        <result property="checkContent" column="check_content"/>
+        <result property="unPassContent" column="un_pass_content"/>
+        <result property="monitoringPointName" column="monitoring_point_name"/>
+        <result property="sampleName" column="sample_name"/>
+        <result property="samplingNum" column="sampling_num"/>
+        <result property="testingDepartment" column="testing_department"/>
+        <result property="testDate" column="test_date"/>
+        <result property="originSource" column="origin_source"/>
+        <result property="testResultJudgment" column="test_result_judgment"/>
+        <result property="brokenFaithPersonName" column="broken_faith_person_name"/>
+        <result property="caseNo" column="case_no"/>
+        <result property="organizationCode" column="organization_code"/>
+        <result property="enterpriseLegalPersonName" column="enterprise_legal_person_name"/>
+        <result property="executionCourt" column="execution_court"/>
+        <result property="geographicalName" column="geographical_name"/>
+        <result property="executionReferenceNo" column="execution_reference_no"/>
+        <result property="executionUnit" column="execution_unit"/>
+        <result property="personExecutedPerformance" column="person_executed_performance"/>
+        <result property="specificCircumstances" column="specific_circumstances"/>
+        <result property="releaseTime" column="release_time"/>
+        <result property="filingTime" column="filing_time"/>
+        <result property="executedPart" column="executed_part"/>
+        <result property="unexecutedPart" column="unexecuted_part"/>
+        <result property="evaluationResult" column="evaluation_result"/>
+        <result property="upgradeResult" column="upgrade_result"/>
+        <result property="gradationBasis" column="gradation_basis"/>
+        <result property="punishmentDate" column="punishment_date"/>
+        <result property="documentNum" column="document_num"/>
+        <result property="punishmentBasis" column="punishment_basis"/>
+        <result property="punishmentResult" column="punishment_result"/>
+        <result property="areaCode" column="area_code"/>
+        <result property="punishmentUnitName" column="punishment_unit_name"/>
+        <result property="punishmentReason" column="punishment_reason"/>
+        <result property="enterpriseId" column="enterprise_id"/>
+    </resultMap>
+
+
+</mapper>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.RptTnBondDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.RptTnBondEntity" id="rptTnBondMap">
+        <result property="id" column="id"/>
+        <result property="enterpriseId" column="enterprise_id"/>
+        <result property="entName" column="ent_name"/>
+        <result property="bId" column="b_id"/>
+        <result property="bondName" column="bond_name"/>
+        <result property="bondNum" column="bond_num"/>
+        <result property="publisherName" column="publisher_name"/>
+        <result property="bondType" column="bond_type"/>
+        <result property="publishTime" column="publish_time"/>
+        <result property="publishExpireTime" column="publish_expire_time"/>
+        <result property="bondTimeLimit" column="bond_time_limit"/>
+        <result property="bondTradeTime" column="bond_trade_time"/>
+        <result property="calInterestType" column="cal_interest_type"/>
+        <result property="bondStopTime" column="bond_stop_time"/>
+        <result property="creditRatingGov" column="credit_rating_gov"/>
+        <result property="debtRating" column="debt_rating"/>
+        <result property="faceValue" column="face_value"/>
+        <result property="refInterestRate" column="ref_interest_rate"/>
+        <result property="faceInterestRate" column="face_interest_rate"/>
+        <result property="realIssuedQuantity" column="real_issued_quantity"/>
+        <result property="planIssuedQuantity" column="plan_issued_quantity"/>
+        <result property="issuedPrice" column="issued_price"/>
+        <result property="interestDiff" column="interest_diff"/>
+        <result property="payInterestHz" column="pay_interest_hz"/>
+        <result property="startCalInterestTime" column="start_cal_interest_time"/>
+        <result property="exeRightType" column="exe_right_type"/>
+        <result property="exeRightTime" column="exe_right_time"/>
+        <result property="escrowAgent" column="escrow_agent"/>
+        <result property="flowRange" column="flow_range"/>
+        <result property="remark" column="remark"/>
+        <result property="tip" column="tip"/>
+        <result property="bCreateTime" column="b_create_time"/>
+        <result property="bUpdateTime" column="b_update_time"/>
+        <result property="isDelete" column="is_delete"/>
+        <result property="creator" column="creator"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updater" column="updater"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="dataState" column="data_state"/>
+    </resultMap>
+
+
+</mapper>

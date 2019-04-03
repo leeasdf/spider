@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.OriEnterpriseOperatingExceptionDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.OriEnterpriseOperatingExceptionEntity" id="oriEnterpriseOperatingExceptionMap">
+        <result property="id" column="id"/>
+        <result property="enterpriseId" column="enterprise_id"/>
+        <result property="operatingExceptionListId" column="operating_exception_list_id"/>
+        <result property="subjectIdentityCode" column="subject_identity_code"/>
+        <result property="enterpriseName" column="enterprise_name"/>
+        <result property="uniformSocialCreditCode" column="uniform_social_credit_code"/>
+        <result property="registerCode" column="register_code"/>
+        <result property="legalRepresentative" column="legal_representative"/>
+        <result property="certType" column="cert_type"/>
+        <result property="certNo" column="cert_no"/>
+        <result property="includedReasonType" column="included_reason_type"/>
+        <result property="includedReasonName" column="included_reason_name"/>
+        <result property="includedDatetime" column="included_datetime"/>
+        <result property="includedOrganizationCode" column="included_organization_code"/>
+        <result property="includedOrganizationName" column="included_organization_name"/>
+        <result property="outFlag" column="out_flag"/>
+        <result property="outReason" column="out_reason"/>
+        <result property="outReasonName" column="out_reason_name"/>
+        <result property="outDatetime" column="out_datetime"/>
+        <result property="outOrganizationCode" column="out_organization_code"/>
+        <result property="outOrganizationName" column="out_organization_name"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+
+
+</mapper>

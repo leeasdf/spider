@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>进出口信息</title>
+		<#include "/header.html">
+</head>
+<body>
+<div id="rrapp" v-cloak>
+    <div v-show="showList">
+        <div class="grid-btn">
+			<#if shiro.hasPermission("spider:rpttnimportexport:save")>
+            <a class="btn btn-primary" @click="add"><i class="fa fa-plus"></i>&nbsp;新增</a>
+			</#if>
+			<#if shiro.hasPermission("spider:rpttnimportexport:update")>
+            <a class="btn btn-primary" @click="update"><i class="fa fa-pencil-square-o"></i>&nbsp;修改</a>
+			</#if>
+			<#if shiro.hasPermission("spider:rpttnimportexport:delete")>
+            <a class="btn btn-primary" @click="del"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
+			</#if>
+        </div>
+        <table id="jqGrid"></table>
+        <div id="jqGridPager"></div>
+    </div>
+
+    <div v-show="!showList" class="panel panel-default">
+        <div class="panel-heading">{{title}}</div>
+        <form class="form-horizontal">
+														                    <div class="form-group">
+                        <div class="col-sm-2 control-label">企业主键</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnImportExport.enterpriseId" placeholder="企业主键"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">企业名称</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnImportExport.entName" placeholder="企业名称"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">行业种类</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnImportExport.industryCategory" placeholder="行业种类"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">年报情况</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnImportExport.annualReport" placeholder="年报情况"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">海关注销标识</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnImportExport.status" placeholder="海关注销标识"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">行政区划</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnImportExport.administrativeDivision" placeholder="行政区划"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">经营类别</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnImportExport.managementCategory" placeholder="经营类别"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">注册海关</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnImportExport.customsRegisteredAddress" placeholder="注册海关"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">报关有效期</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnImportExport.validityDate" placeholder="报关有效期"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">经济区划</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnImportExport.economicDivision" placeholder="经济区划"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">注册日期</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnImportExport.recordDate" placeholder="注册日期"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">海关注册号</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnImportExport.crCode" placeholder="海关注册号"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">特殊贸易区域</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnImportExport.specialTradeArea" placeholder="特殊贸易区域"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">跨境贸易电子商务类型</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnImportExport.types" placeholder="跨境贸易电子商务类型"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">信用登记</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnImportExport.creditRating" placeholder="信用登记"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">sanction</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnImportExport.sanction" placeholder="sanction"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">创建人ID</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnImportExport.creator" placeholder="创建人ID"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">创建时间</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnImportExport.createTime" placeholder="创建时间"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">修改人ID</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnImportExport.updater" placeholder="修改人ID"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">修改时间</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnImportExport.updateTime" placeholder="修改时间"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">数据状态：1-正常 0-删除</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptTnImportExport.dataState" placeholder="数据状态：1-正常 0-删除"/>
+                        </div>
+                    </div>
+							            <div class="form-group">
+                <div class="col-sm-2 control-label"></div>
+                <input type="button" class="btn btn-primary" @click="saveOrUpdate" value="确定"/>
+                &nbsp;&nbsp;<input type="button" class="btn btn-warning" @click="reload" value="返回"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="${request.contextPath}/statics/js/modules/spider/rpttnimportexport.js?_${.now?long}"></script>
+</body>
+</html>

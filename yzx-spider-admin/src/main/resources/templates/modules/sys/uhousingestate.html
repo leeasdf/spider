@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>小区基本信息表</title>
+		<#include "/header.html">
+</head>
+<body>
+<div id="rrapp" v-cloak>
+    <div v-show="showList">
+        <div class="grid-btn">
+			<#if shiro.hasPermission("sys:uhousingestate:save")>
+            <a class="btn btn-primary" @click="add"><i class="fa fa-plus"></i>&nbsp;新增</a>
+			</#if>
+			<#if shiro.hasPermission("sys:uhousingestate:update")>
+            <a class="btn btn-primary" @click="update"><i class="fa fa-pencil-square-o"></i>&nbsp;修改</a>
+			</#if>
+			<#if shiro.hasPermission("sys:uhousingestate:delete")>
+            <a class="btn btn-primary" @click="del"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
+			</#if>
+        </div>
+        <table id="jqGrid"></table>
+        <div id="jqGridPager"></div>
+    </div>
+
+    <div v-show="!showList" class="panel panel-default">
+        <div class="panel-heading">{{title}}</div>
+        <form class="form-horizontal">
+														                    <div class="form-group">
+                        <div class="col-sm-2 control-label">小区编号</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.estateNo" placeholder="小区编号"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">小区名称</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.name" placeholder="小区名称"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">90天成交套数</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.ninetyDaysDealNum" placeholder="90天成交套数"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">正在出租套数</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.rentingNum" placeholder="正在出租套数"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">城市</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.cityId" placeholder="城市"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">区域</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.areaCodeId" placeholder="区域"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">板块</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.plateId" placeholder="板块"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">建筑年代</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.buildYears" placeholder="建筑年代"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">标签</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.tag" placeholder="标签"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">上月二手房参考均价</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.lastMonthAveragePrice" placeholder="上月二手房参考均价"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">在售二手房套数</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.secondHandHousrNum" placeholder="在售二手房套数"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">小区所属商圈</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.businessCircle" placeholder="小区所属商圈"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">建筑类型</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.buildType" placeholder="建筑类型"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">物业费（平米/月）</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.propertyFee" placeholder="物业费（平米/月）"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">物业公司</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.propertyCompany" placeholder="物业公司"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">开发商</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.developCompany" placeholder="开发商"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">楼栋总数(栋)</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.buildSumNo" placeholder="楼栋总数(栋)"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">房屋总数</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.houseSumNo" placeholder="房屋总数"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">附近门店</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.nearbyStores" placeholder="附近门店"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">地铁站</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.subway" placeholder="地铁站"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">数据状态</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.dataStatus" placeholder="数据状态"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">创建人</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.creator" placeholder="创建人"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">修改人</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.updator" placeholder="修改人"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">创建时间</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.createTime" placeholder="创建时间"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">修改时间</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.updateTime" placeholder="修改时间"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">备注</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uHousingEstate.remark" placeholder="备注"/>
+                        </div>
+                    </div>
+							            <div class="form-group">
+                <div class="col-sm-2 control-label"></div>
+                <input type="button" class="btn btn-primary" @click="saveOrUpdate" value="确定"/>
+                &nbsp;&nbsp;<input type="button" class="btn btn-warning" @click="reload" value="返回"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="${request.contextPath}/statics/js/modules/sys/uhousingestate.js?_${.now?long}"></script>
+</body>
+</html>

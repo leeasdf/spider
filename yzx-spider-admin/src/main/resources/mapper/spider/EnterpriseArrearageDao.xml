@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.EnterpriseArrearageDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.EnterpriseArrearageEntity" id="enterpriseArrearageMap">
+        <result property="id" column="id"/>
+        <result property="enterpriseId" column="enterprise_id"/>
+        <result property="incubatorEnterpriseId" column="incubator_enterprise_id"/>
+        <result property="incubatorName" column="incubator_name"/>
+        <result property="enterpriseName" column="enterprise_name"/>
+        <result property="costType" column="cost_type"/>
+        <result property="yearMonth" column="year_month"/>
+        <result property="costLimitType" column="cost_limit_type"/>
+        <result property="quantity" column="quantity"/>
+        <result property="remark" column="remark"/>
+        <result property="createtime" column="createtime"/>
+    </resultMap>
+
+
+</mapper>

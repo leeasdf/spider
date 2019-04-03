@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.EntHighTechPunishInfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.EntHighTechPunishInfoEntity" id="entHighTechPunishInfoMap">
+        <result property="id" column="id"/>
+        <result property="memId" column="mem_id"/>
+        <result property="lawEnforcement" column="law_enforcement"/>
+        <result property="punishNum" column="punish_num"/>
+        <result property="company" column="company"/>
+        <result property="companyLegalPerson" column="company_legal_person"/>
+        <result property="publishDate" column="publish_date"/>
+        <result property="caseName" column="case_name"/>
+        <result property="enterpriseId" column="enterprise_id"/>
+    </resultMap>
+
+
+</mapper>

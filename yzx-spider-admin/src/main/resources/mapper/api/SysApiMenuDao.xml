@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.api.dao.SysApiMenuDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+	<resultMap type="xin.tianchuang.modules.api.entity.SysApiMenuEntity"
+		id="sysApiMenuMap">
+		<result property="apiId" column="api_id" />
+		<result property="apiUrl" column="api_url" />
+		<result property="apiDesc" column="api_desc" />
+		<result property="updateTime" column="update_time" />
+		<result property="createTime" column="create_time" />
+		<result property="status" column="status" />
+	</resultMap>
+
+	<select id="queryApiMenuByApiUrl" resultType="xin.tianchuang.modules.api.entity.SysApiMenuEntity">
+		select * from
+		sys_api_menu where api_url = #{value}
+	</select>
+
+	<delete id="deleteBatchByNotApiUrls">
+		delete from sys_api_menu where api_url not in
+		<foreach collection="apiUrlList" item="item" index="index"
+			open="(" close=")" separator=",">
+			#{item}
+		</foreach>
+	</delete>
+
+	<select id="queryApiMenuByAppId" resultMap="sysApiMenuMap">
+		select am.* from
+		sys_app_api aa
+		left join sys_api_menu am on aa.api_id = am.api_id
+		where aa.app_id=#{appId}
+	</select>
+
+</mapper>

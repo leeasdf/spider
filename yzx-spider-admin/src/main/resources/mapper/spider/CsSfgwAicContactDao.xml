@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.CsSfgwAicContactDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.CsSfgwAicContactEntity" id="csSfgwAicContactMap">
+        <result property="isinvalid" column="ISINVALID"/>
+        <result property="lastdate" column="LASTDATE"/>
+        <result property="etpsId" column="ETPS_ID"/>
+        <result property="name" column="NAME"/>
+        <result property="certype" column="CERTYPE"/>
+        <result property="cerno" column="CERNO"/>
+        <result property="fixedtel" column="FIXEDTEL"/>
+        <result property="mobilephone" column="MOBILEPHONE"/>
+        <result property="email" column="EMAIL"/>
+        <result property="zjid" column="ZJID"/>
+    </resultMap>
+
+
+</mapper>

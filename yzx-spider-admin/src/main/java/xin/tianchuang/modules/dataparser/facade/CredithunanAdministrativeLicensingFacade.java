@@ -1,0 +1,70 @@
+package xin.tianchuang.modules.dataparser.facade;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.util.Assert;
+import xin.tianchuang.modules.dataparser.biz.Parser;
+import xin.tianchuang.modules.dataparser.biz.ParserFactory;
+import xin.tianchuang.modules.dataparser.entity.CredithunanAbnormalNoticeEntity;
+import xin.tianchuang.modules.dataparser.entity.CredithunanAdministrativeLicensingEntity;
+import xin.tianchuang.modules.dataparser.service.CredithunanAdministrativeLicensingService;
+import xin.tianchuang.modules.spider.entity.SpiderRawDataEntity;
+import xin.tianchuang.modules.spider.enums.SpiderTypeEnum;
+import xin.tianchuang.modules.spider.service.SpiderRawDataService;
+
+import java.util.List;
+
+/**
+ * Created by zhuzhengliang on 2018/10/15.
+ */
+@Component
+public class CredithunanAdministrativeLicensingFacade {
+    private static final Logger LOGGER= LoggerFactory.getLogger(CredithunanAdministrativeLicensingFacade.class);
+    @Autowired
+    private SpiderRawDataService spiderRawDataService;
+
+    @Autowired
+    private CredithunanAdministrativeLicensingService service;
+
+    @Deprecated
+    public void doBussiness(){
+        doBussiness("");
+    }
+
+    /**
+     * 可单独跑某个企业 也可不传企业 跑全部的
+     * @param enterpriseName
+     */
+    @Deprecated
+    public void doBussiness(String enterpriseName){
+        //获取记录
+
+        List<SpiderRawDataEntity> entityList= spiderRawDataService.selectListByEnterpriseNameAndType(enterpriseName, SpiderTypeEnum.ADMINISTRATIVE_LICENSING);
+        //解析
+        Parser<CredithunanAdministrativeLicensingEntity> parser= ParserFactory.getInstance(SpiderTypeEnum.ADMINISTRATIVE_LICENSING);
+        try {
+            for (SpiderRawDataEntity entity : entityList) {
+                CredithunanAdministrativeLicensingEntity credithunanAdministrativeLicensingEntity=parser.parser(entity.getContent());
+                service.saveParserData(credithunanAdministrativeLicensingEntity,entity);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void doBussiness(SpiderRawDataEntity dataEntity) throws Exception{
+        //解析
+        Parser<CredithunanAdministrativeLicensingEntity> parser= ParserFactory.getInstance(SpiderTypeEnum.ADMINISTRATIVE_LICENSING);
+        try {
+            CredithunanAdministrativeLicensingEntity credithunanAdministrativeLicensingEntity=parser.parser(dataEntity.getContent());
+            Assert.notNull(credithunanAdministrativeLicensingEntity,"没有爬取到任何数据无法解析");
+            credithunanAdministrativeLicensingEntity.setSpiderId(dataEntity.getId());
+            service.saveParserData(credithunanAdministrativeLicensingEntity,dataEntity);
+        } catch (Exception e) {
+            LOGGER.error("解析数据是出错 spiderId="+dataEntity.getId()+"，"+e.getMessage(),e);
+            throw e;
+        }
+    }
+}

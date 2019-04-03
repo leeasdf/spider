@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.externalApi.qichacha.dao.QccBasicIndustryDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.externalApi.qichacha.entity.QccBasicIndustryEntity" id="qccBasicIndustryMap">
+        <result property="id" column="id"/>
+        <result property="entName" column="ent_name"/>
+        <result property="creditCode" column="credit_code"/>
+        <result property="industryCode" column="industry_code"/>
+        <result property="industry" column="industry"/>
+        <result property="subIndustryCode" column="sub_industry_code"/>
+        <result property="subIndustry" column="sub_industry"/>
+        <result property="middleCategoryCode" column="middle_category_code"/>
+        <result property="middleCategory" column="middle_category"/>
+        <result property="smallCategoryCode" column="small_category_code"/>
+        <result property="smallCategory" column="small_category"/>
+        <result property="dataStatus" column="data_status"/>
+        <result property="createTime" column="create_time"/>
+        <result property="creator" column="creator"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="updater" column="updater"/>
+    </resultMap>
+
+
+</mapper>

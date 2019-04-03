@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.CsSfgwTaxInformationDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.CsSfgwTaxInformationEntity" id="csSfgwTaxInformationMap">
+        <result property="isinvalid" column="ISINVALID"/>
+        <result property="lastdate" column="LASTDATE"/>
+        <result property="bt" column="BT"/>
+        <result property="nsrmc" column="NSRMC"/>
+        <result property="nssbh" column="NSSBH"/>
+        <result property="fddbr" column="FDDBR"/>
+        <result property="sfzhm" column="SFZHM"/>
+        <result property="jydz" column="JYDZ"/>
+        <result property="qssz" column="QSSZ"/>
+        <result property="qsye" column="QSYE"/>
+        <result property="bnxfsqk" column="BNXFSQK"/>
+        <result property="nr" column="NR"/>
+        <result property="sj" column="SJ"/>
+        <result property="zjid" column="ZJID"/>
+    </resultMap>
+
+
+</mapper>

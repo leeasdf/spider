@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>出租房基本信息表</title>
+		<#include "/header.html">
+</head>
+<body>
+<div id="rrapp" v-cloak>
+    <div v-show="showList">
+        <div class="grid-btn">
+			<#if shiro.hasPermission("sys:urentalhousing:save")>
+            <a class="btn btn-primary" @click="add"><i class="fa fa-plus"></i>&nbsp;新增</a>
+			</#if>
+			<#if shiro.hasPermission("sys:urentalhousing:update")>
+            <a class="btn btn-primary" @click="update"><i class="fa fa-pencil-square-o"></i>&nbsp;修改</a>
+			</#if>
+			<#if shiro.hasPermission("sys:urentalhousing:delete")>
+            <a class="btn btn-primary" @click="del"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
+			</#if>
+        </div>
+        <table id="jqGrid"></table>
+        <div id="jqGridPager"></div>
+    </div>
+
+    <div v-show="!showList" class="panel panel-default">
+        <div class="panel-heading">{{title}}</div>
+        <form class="form-horizontal">
+														                    <div class="form-group">
+                        <div class="col-sm-2 control-label">出租房ID</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.housingEstateNo" placeholder="出租房ID"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">标题</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.title" placeholder="标题"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">小区id</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.housingEstateId" placeholder="小区id"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">小区名称</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.housingEstateName" placeholder="小区名称"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">户型(室)</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.doorModelRoom" placeholder="户型(室)"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">户型(厅)</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.doorModelHall" placeholder="户型(厅)"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">户型(卫)</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.doorModelToilet" placeholder="户型(卫)"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">面积</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.area" placeholder="面积"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">朝向</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.toward" placeholder="朝向"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">城市</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.city" placeholder="城市"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">区域</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.areaCode" placeholder="区域"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">板块</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.plate" placeholder="板块"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">楼层</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.floor" placeholder="楼层"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">建筑年代</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.buildYears" placeholder="建筑年代"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">出租价格</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.price" placeholder="出租价格"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">看过此房的人数</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.watchedNo" placeholder="看过此房的人数"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">地铁站</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.subway" placeholder="地铁站"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">标签</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.tag" placeholder="标签"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">描述</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.desc" placeholder="描述"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">发布时间</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.publishTime" placeholder="发布时间"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">租赁方式</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.leaseMode" placeholder="租赁方式"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">付款方式</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.payMode" placeholder="付款方式"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">房屋现状</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.housingSituation" placeholder="房屋现状"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">供暖方式</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.heatingMethod" placeholder="供暖方式"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">是否有衣柜</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.wardrobeFlag" placeholder="是否有衣柜"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">是否有桌椅</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.tableFlag" placeholder="是否有桌椅"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">是否有电视</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.tvFlag" placeholder="是否有电视"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">是否有冰箱</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.refrigeratorFlag" placeholder="是否有冰箱"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">是否有洗衣机</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.washMachineFlag" placeholder="是否有洗衣机"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">是否有空调</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.airConditionFlag" placeholder="是否有空调"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">是否有热水器</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.waterHeaterFlag" placeholder="是否有热水器"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">是否有微波炉</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.microwaveOvenFlag" placeholder="是否有微波炉"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">是否有暖气</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.heatingFlag" placeholder="是否有暖气"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">是否有宽带</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.broadbandFlag" placeholder="是否有宽带"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">是否有天然气</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.naturalGasFlag" placeholder="是否有天然气"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">小区介绍</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.housingEstateDesc" placeholder="小区介绍"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">交通出行</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.transportation" placeholder="交通出行"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">周边配套</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.peripheral" placeholder="周边配套"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">房源亮点</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.propertiesWindow" placeholder="房源亮点"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">数据状态</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.dataStatus" placeholder="数据状态"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">创建人</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.creator" placeholder="创建人"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">修改人</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.updator" placeholder="修改人"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">创建时间</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.createTime" placeholder="创建时间"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">修改时间</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.updateTime" placeholder="修改时间"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">备注</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="uRentalHousing.remark" placeholder="备注"/>
+                        </div>
+                    </div>
+							            <div class="form-group">
+                <div class="col-sm-2 control-label"></div>
+                <input type="button" class="btn btn-primary" @click="saveOrUpdate" value="确定"/>
+                &nbsp;&nbsp;<input type="button" class="btn btn-warning" @click="reload" value="返回"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="${request.contextPath}/statics/js/modules/sys/urentalhousing.js?_${.now?long}"></script>
+</body>
+</html>

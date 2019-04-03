@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.RptTnEquityDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.RptTnEquityEntity" id="rptTnEquityMap">
+        <result property="id" column="id"/>
+        <result property="enterpriseId" column="enterprise_id"/>
+        <result property="entName" column="ent_name"/>
+        <result property="equityAmount" column="equity_amount"/>
+        <result property="putDate" column="put_date"/>
+        <result property="publishDate" column="publish_date"/>
+        <result property="pledgorStr" column="pledgor_str"/>
+        <result property="regDate" column="reg_date"/>
+        <result property="state" column="state"/>
+        <result property="certifNumber" column="certif_number"/>
+        <result property="regNumber" column="reg_number"/>
+        <result property="pledgee" column="pledgee"/>
+        <result property="companyList" column="company_list"/>
+        <result property="pledgeeList" column="pledgee_list"/>
+        <result property="pledgorList" column="pledgor_list"/>
+        <result property="pledgor" column="pledgor"/>
+        <result property="certifNumberR" column="certif_number_r"/>
+        <result property="creator" column="creator"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updater" column="updater"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="dataState" column="data_state"/>
+        <result property="base" column="base"/>
+        <result property="pledgeeStr" column="pledgee_str"/>
+    </resultMap>
+
+
+</mapper>

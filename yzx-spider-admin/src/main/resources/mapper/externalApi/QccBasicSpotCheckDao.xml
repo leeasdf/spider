@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.externalApi.qichacha.dao.QccBasicSpotCheckDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.externalApi.qichacha.entity.QccBasicSpotCheckEntity" id="qccBasicSpotCheckMap">
+        <result property="id" column="id"/>
+        <result property="entName" column="ent_name"/>
+        <result property="creditCode" column="credit_code"/>
+        <result property="no" column="no"/>
+        <result property="executiveOrg" column="executive_org"/>
+        <result property="type" column="type"/>
+        <result property="date" column="date"/>
+        <result property="consequence" column="consequence"/>
+        <result property="remark" column="remark"/>
+        <result property="dataStatus" column="data_status"/>
+        <result property="createTime" column="create_time"/>
+        <result property="creator" column="creator"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="updater" column="updater"/>
+    </resultMap>
+
+
+</mapper>

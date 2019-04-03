@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.EnterpriseIncubatorRoomDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.EnterpriseIncubatorRoomEntity" id="enterpriseIncubatorRoomMap">
+        <result property="id" column="id"/>
+        <result property="enterpriseId" column="enterprise_id"/>
+        <result property="incubatorName" column="incubator_name"/>
+        <result property="enterpriseName" column="enterprise_name"/>
+        <result property="buildingRoomNo" column="building_room_no"/>
+        <result property="enterpriseArea" column="enterprise_area"/>
+        <result property="remark" column="remark"/>
+        <result property="createtime" column="createtime"/>
+    </resultMap>
+
+
+</mapper>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.RptPlitigationInfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.RptPlitigationInfoEntity" id="rptPlitigationInfoMap">
+        <result property="id" column="id"/>
+        <result property="memId" column="mem_id"/>
+        <result property="enterpriseId" column="enterprise_id"/>
+        <result property="cpwsCount" column="cpws_count"/>
+        <result property="ktggCount" column="ktgg_count"/>
+        <result property="zxggCount" column="zxgg_count"/>
+        <result property="sxggCount" column="sxgg_count"/>
+        <result property="wdhmdCount" column="wdhmd_count"/>
+        <result property="ajlcCount" column="ajlc_count"/>
+    </resultMap>
+
+
+</mapper>

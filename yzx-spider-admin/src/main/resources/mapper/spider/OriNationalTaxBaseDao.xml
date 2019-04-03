@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.OriNationalTaxBaseDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.OriNationalTaxBaseEntity" id="oriNationalTaxBaseMap">
+        <result property="id" column="id"/>
+        <result property="organizationCode" column="organization_code"/>
+        <result property="enterpriseName" column="enterprise_name"/>
+        <result property="licenseRegisterNumber" column="license_register_number"/>
+        <result property="taxNumber" column="tax_number"/>
+        <result property="legal" column="legal"/>
+        <result property="cardNumber" column="card_number"/>
+        <result property="registerAddress" column="register_address"/>
+        <result property="businessAddress" column="business_address"/>
+        <result property="businessWay" column="business_way"/>
+        <result property="telephone" column="telephone"/>
+        <result property="enterpriseStatus" column="enterprise_status"/>
+        <result property="taxDepartmentCode" column="tax_department_code"/>
+        <result property="certificationDate" column="certification_date"/>
+        <result property="taxRegisterDate" column="tax_register_date"/>
+        <result property="registerType" column="register_type"/>
+        <result property="businessDeadline" column="business_deadline"/>
+        <result property="registeredCapital" column="registered_capital"/>
+        <result property="currency" column="currency"/>
+        <result property="bank" column="bank"/>
+        <result property="bankDot" column="bank_dot"/>
+        <result property="payingBankAccount" column="paying_bank_account"/>
+    </resultMap>
+
+
+</mapper>

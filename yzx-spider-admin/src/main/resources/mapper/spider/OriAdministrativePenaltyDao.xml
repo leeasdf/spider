@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.OriAdministrativePenaltyDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.OriAdministrativePenaltyEntity" id="oriAdministrativePenaltyMap">
+        <result property="id" column="id"/>
+        <result property="no" column="no"/>
+        <result property="pollutionSourceNumber" column="pollution_source_number"/>
+        <result property="pollutionSourceName" column="pollution_source_name"/>
+        <result property="year" column="year"/>
+        <result property="enterpriseName" column="enterprise_name"/>
+        <result property="investigationOrganization" column="investigation_organization"/>
+        <result property="caseNumber" column="case_number"/>
+        <result property="decisionDocument" column="decision_document"/>
+        <result property="caseDate" column="case_date"/>
+        <result property="caseIntroduction" column="case_introduction"/>
+        <result property="majorViolations" column="major_violations"/>
+        <result property="punishmentBasis" column="punishment_basis"/>
+        <result property="punishmentType" column="punishment_type"/>
+        <result property="fineFee" column="fine_fee"/>
+        <result property="administrativeDecree" column="administrative_decree"/>
+        <result property="isHearing" column="is_hearing"/>
+        <result property="decideDate" column="decide_date"/>
+        <result property="decideContent" column="decide_content"/>
+        <result property="implementation" column="implementation"/>
+        <result property="executionDate" column="execution_date"/>
+        <result property="reconsiderationResult" column="reconsideration_result"/>
+        <result property="lawsuitResult" column="lawsuit_result"/>
+        <result property="transferInformation" column="transfer_information"/>
+        <result property="closeDate" column="close_date"/>
+        <result property="isClose" column="is_close"/>
+        <result property="fileNumber" column="file_number"/>
+        <result property="remark" column="remark"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTine" column="update_tine"/>
+        <result property="resource" column="resource"/>
+        <result property="status" column="status"/>
+        <result property="exchangeStatus" column="exchange_status"/>
+        <result property="examineStatus" column="examine_status"/>
+        <result property="creditCode" column="credit_code"/>
+        <result property="relatedMaterials" column="related_materials"/>
+        <result property="casesType" column="cases_type"/>
+        <result property="timestamp" column="timestamp"/>
+    </resultMap>
+
+
+</mapper>

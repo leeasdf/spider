@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.RptBaseInfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.RptBaseInfoEntity" id="rptBaseInfoMap">
+        <result property="id" column="id"/>
+        <result property="memId" column="mem_id"/>
+        <result property="enterpriseId" column="enterprise_id"/>
+        <result property="entname" column="entname"/>
+        <result property="regno" column="regno"/>
+        <result property="oriregno" column="oriregno"/>
+        <result property="frname" column="frname"/>
+        <result property="regcap" column="regcap"/>
+        <result property="reccap" column="reccap"/>
+        <result property="regcapcur" column="regcapcur"/>
+        <result property="entstatus" column="entstatus"/>
+        <result property="enttype" column="enttype"/>
+        <result property="esdate" column="esdate"/>
+        <result property="opfrom" column="opfrom"/>
+        <result property="opto" column="opto"/>
+        <result property="dom" column="dom"/>
+        <result property="regorg" column="regorg"/>
+        <result property="abuitem" column="abuitem"/>
+        <result property="cbuitem" column="cbuitem"/>
+        <result property="opscope" column="opscope"/>
+        <result property="opscoandform" column="opscoandform"/>
+        <result property="ancheyear" column="ancheyear"/>
+        <result property="changedate" column="changedate"/>
+        <result property="candate" column="candate"/>
+        <result property="revdate" column="revdate"/>
+        <result property="anchedate" column="anchedate"/>
+        <result property="industryphycode" column="industryphycode"/>
+        <result property="industryphyname" column="industryphyname"/>
+        <result property="industrycocode" column="industrycocode"/>
+        <result property="industryconame" column="industryconame"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+
+
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.CsSfgwDsRentownedtaxofpersonDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.CsSfgwDsRentownedtaxofpersonEntity" id="csSfgwDsRentownedtaxofpersonMap">
+        <result property="isinvalid" column="ISINVALID"/>
+        <result property="lastdate" column="LASTDATE"/>
+        <result property="nsrmc" column="NSRMC"/>
+        <result property="nsrsbh" column="NSRSBH"/>
+        <result property="fddbrxm" column="FDDBRXM"/>
+        <result property="fddbrsfzjhm" column="FDDBRSFZJHM"/>
+        <result property="qsye" column="QSYE"/>
+        <result property="scjydz" column="SCJYDZ"/>
+        <result property="ggrq" column="GGRQ"/>
+        <result property="zjid" column="ZJID"/>
+    </resultMap>
+
+
+</mapper>

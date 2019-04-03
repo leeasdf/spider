@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.CsSfgwAicInvestordocumentDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.CsSfgwAicInvestordocumentEntity" id="csSfgwAicInvestordocumentMap">
+        <result property="isinvalid" column="ISINVALID"/>
+        <result property="lastdate" column="LASTDATE"/>
+        <result property="invtNo" column="INVT_NO"/>
+        <result property="etpsId" column="ETPS_ID"/>
+        <result property="invtype" column="INVTYPE"/>
+        <result property="name" column="NAME"/>
+        <result property="certype" column="CERTYPE"/>
+        <result property="cerno" column="CERNO"/>
+        <result property="entname" column="ENTNAME"/>
+        <result property="blictype" column="BLICTYPE"/>
+        <result property="blicno" column="BLICNO"/>
+        <result property="subconam" column="SUBCONAM"/>
+        <result property="condate" column="CONDATE"/>
+        <result property="conform" column="CONFORM"/>
+        <result property="subconprop" column="SUBCONPROP"/>
+        <result property="zjid" column="ZJID"/>
+    </resultMap>
+
+
+</mapper>

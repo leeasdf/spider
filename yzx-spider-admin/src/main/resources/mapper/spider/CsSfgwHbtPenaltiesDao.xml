@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.CsSfgwHbtPenaltiesDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.CsSfgwHbtPenaltiesEntity" id="csSfgwHbtPenaltiesMap">
+        <result property="isinvalid" column="ISINVALID"/>
+        <result property="lastdate" column="LASTDATE"/>
+        <result property="reginname" column="REGINNAME"/>
+        <result property="executionpunishment" column="EXECUTIONPUNISHMENT"/>
+        <result property="penaltyid" column="PENALTYID"/>
+        <result property="corporationname" column="CORPORATIONNAME"/>
+        <result property="dateofpunishment" column="DATEOFPUNISHMENT"/>
+        <result property="cfTypr" column="CF_TYPR"/>
+        <result property="illegalfacts" column="ILLEGALFACTS"/>
+        <result property="rectification" column="RECTIFICATION"/>
+        <result property="remarks" column="REMARKS"/>
+        <result property="zjid" column="ZJID"/>
+    </resultMap>
+
+
+</mapper>

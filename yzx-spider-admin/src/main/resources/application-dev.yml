@@ -1,0 +1,55 @@
+spring:
+    datasource:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driverClassName: com.mysql.jdbc.Driver
+        druid:
+            first:  #数据源1
+                url: jdbc:mysql://112.74.187.95:3306/yzx_spider?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+                username: spider
+                password: Spider!@#123
+
+            second:  #数据源2
+                url: jdbc:mysql://112.74.187.95:3306/yzx_spider?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+                username: spider
+                password: Spider!@#123
+
+            initial-size: 10
+            max-active: 100
+            min-idle: 10
+            max-wait: 60000
+            pool-prepared-statements: true
+            max-pool-prepared-statement-per-connection-size: 20
+            time-between-eviction-runs-millis: 60000
+            min-evictable-idle-time-millis: 300000
+            #validation-query: SELECT 1 FROM DUAL
+            test-while-idle: true
+            test-on-borrow: false
+            test-on-return: false
+            stat-view-servlet:
+                enabled: true
+                url-pattern: /druid/*
+                #login-username: admin
+                #login-password: admin
+            filter:
+                stat:
+                    log-slow-sql: true
+                    slow-sql-millis: 1000
+                    merge-sql: false
+                wall:
+                    config:
+                        multi-statement-allow: true
+qichacha:
+  security:
+    key: f7f1d803553b403ca1356b502a71a8f2
+    secretKey: A693C29BB1328A26343EB9B5CD6031E6
+  api-url:
+      maxRecord: 200
+      updatePeriod: 60
+      pageSize: 50
+      pageIndex: 1
+      copyright: http://api.qichacha.com/CopyRight/SearchSoftwareCr
+      patent: http://api.qichacha.com/PatentV4/SearchPatents
+      trademark: http://api.qichacha.com/tm/SearchByApplicant
+      seriousViolation: http://api.qichacha.com/SeriousViolation/GetSeriousViolationList
+      tender: http://api.qichacha.com/BusinessStateV4/TenderSearch
+      fullDetails: http://api.qichacha.com/ECIV4/GetFullDetailsByName

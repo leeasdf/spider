@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+		<#include "/header.html">
+</head>
+<body>
+<div id="rrapp" v-cloak>
+    <div v-show="showList">
+        <div class="grid-btn">
+			<#if shiro.hasPermission("sys:rptcaseinfo:save")>
+            <a class="btn btn-primary" @click="add"><i class="fa fa-plus"></i>&nbsp;新增</a>
+			</#if>
+			<#if shiro.hasPermission("sys:rptcaseinfo:update")>
+            <a class="btn btn-primary" @click="update"><i class="fa fa-pencil-square-o"></i>&nbsp;修改</a>
+			</#if>
+			<#if shiro.hasPermission("sys:rptcaseinfo:delete")>
+            <a class="btn btn-primary" @click="del"><i class="fa fa-trash-o"></i>&nbsp;删除</a>
+			</#if>
+        </div>
+        <table id="jqGrid"></table>
+        <div id="jqGridPager"></div>
+    </div>
+
+    <div v-show="!showList" class="panel panel-default">
+        <div class="panel-heading">{{title}}</div>
+        <form class="form-horizontal">
+														                    <div class="form-group">
+                        <div class="col-sm-2 control-label">会员ID</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptCaseInfo.memid" placeholder="会员ID"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">企业ID</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptCaseInfo.enterpriseId" placeholder="企业ID"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">案发时间</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptCaseInfo.casetime" placeholder="案发时间"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">案由</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptCaseInfo.casereason" placeholder="案由"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">案值</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptCaseInfo.caseval" placeholder="案值"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">案件类型</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptCaseInfo.casetype" placeholder="案件类型"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">执行类别</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptCaseInfo.exesort" placeholder="执行类别"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">案件结果</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptCaseInfo.caseresult" placeholder="案件结果"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">处罚决定文书</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptCaseInfo.pendecno" placeholder="处罚决定文书"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">处罚决定书签发日期</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptCaseInfo.pendecissdate" placeholder="处罚决定书签发日期"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">作出行政处罚决定机关名称</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptCaseInfo.penauth" placeholder="作出行政处罚决定机关名称"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">主要违法事实</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptCaseInfo.illegfact" placeholder="主要违法事实"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">处罚依据</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptCaseInfo.penbasis" placeholder="处罚依据"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">处罚种类</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptCaseInfo.pentype" placeholder="处罚种类"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">处罚结果</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptCaseInfo.penresult" placeholder="处罚结果"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">处罚金额</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptCaseInfo.penam" placeholder="处罚金额"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">处罚执行情况</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptCaseInfo.penexest" placeholder="处罚执行情况"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">创建人ID</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptCaseInfo.creator" placeholder="创建人ID"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">创建时间</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptCaseInfo.createTime" placeholder="创建时间"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">修改人ID</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptCaseInfo.updater" placeholder="修改人ID"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">修改时间</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptCaseInfo.updateTime" placeholder="修改时间"/>
+                        </div>
+                    </div>
+											                    <div class="form-group">
+                        <div class="col-sm-2 control-label">数据状态：1-正常 0-删除</div>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" v-model="rptCaseInfo.dataState" placeholder="数据状态：1-正常 0-删除"/>
+                        </div>
+                    </div>
+							            <div class="form-group">
+                <div class="col-sm-2 control-label"></div>
+                <input type="button" class="btn btn-primary" @click="saveOrUpdate" value="确定"/>
+                &nbsp;&nbsp;<input type="button" class="btn btn-warning" @click="reload" value="返回"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="${request.contextPath}/statics/js/modules/sys/rptcaseinfo.js?_${.now?long}"></script>
+</body>
+</html>

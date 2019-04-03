@@ -1,0 +1,150 @@
+@import "normalize";       // api: https://github.com/necolas/normalize.css/
+@import "variables";       // 站点变量
+@import "base";
+$borderColor: #dbdbdb;
+$highlight: #17B3A3;
+.mb10{
+	margin-bottom: 10px;
+}
+.pull-right{
+	float: right;
+}
+.yzx-table-expand {
+	font-size: 0;
+	label{
+		width: 90px;
+		color: #99a9bf;
+	}
+	.el-form-item{
+		margin-right: 0;
+		margin-bottom: 0;
+		width: 50%;
+	}
+	.yzx-table-rowspan{
+		width:100%;
+		.el-form-item__content{
+			max-width:80%;
+			padding:5px 0;
+			line-height: 26px;
+		}
+	}
+}
+.yzx-radio-group{
+	padding-top: 10px;
+	.el-radio+.el-radio{
+		margin-left: 0;
+	}
+	.el-radio{
+		margin-right: 30px;
+		margin-bottom: 20px;
+	}
+}
+.yzx .title{
+	position: relative;
+	line-height: 50px;
+	border-bottom: 1px solid $borderColor;
+	span{
+		display:inline-block;
+		border-bottom:2px solid $highlight;
+	}
+}
+.headerCls{
+	background:#f5faff;
+}
+.el-table .headerCls th,.el-table .headerCls td{
+	background:#f5faff;
+}
+
+.yzx-menu {
+	position: relative;
+	.yzx-mitem{
+		width:20%;
+	}
+	.yzx-submenu{
+		list-style: none;
+		line-height: 30px;
+		padding: 0;
+		z-index: 9;
+		& li:not(.disabled):hover{
+			cursor: pointer;
+			color: $highlight;
+		}
+		& li.disabled{
+			color: #ccc;
+		}
+	}
+	.yzx-mitem{
+		position: relative;
+		font-size:16px;
+		text-align: center;
+		&.is-active{
+			color:#17B3A3;
+			// border-bottom: none;
+		}
+	}
+	.yzx-menu-panel{
+    	display: none;
+    }
+	&:hover .yzx-menu-panel{
+		display:block;
+	}
+    .yzx-menu-ul{
+    	margin:-1px 0 0;
+    	padding:0;
+    	list-style: none;
+    	position: absolute;
+    	left:0;
+    	right:0;
+    	background:#fff;
+    	border:1px solid $borderColor;
+    	z-index:2;
+		display: flex;
+		flex-direction: row;
+		align-items: stretch;
+    	& > li{
+    		width:20%;
+    		padding-left: 20px;
+    		&.active{
+    			background:#f1f1f1;
+    		}
+    	}
+    }
+}
+
+.table-view{
+	width:100%;
+	border-collapse: collapse;
+	table-layout: fixed;
+	border:1px solid #ebeef5;
+	td{
+		line-height: 20px;
+		padding:10px;
+		border: 1px solid #ebeef5;
+		word-wrap: break-word;
+		word-break: break-all;
+		&.td_txt{
+			width:160px;
+			background:#f5faff;
+		}
+	}
+}
+
+.yzx-tabs .el-tabs__item.is-bottom:nth-child(2), .yzx-tabs .el-tabs__item.is-top:nth-child(2), .yzx-tabs .el-tabs__item.is-bottom:nth-child(2), .yzx-tabs .el-tabs__item.is-top:nth-child(2){
+	padding-left: 0px;
+}
+
+.yzx-info{
+	.name{
+		font-size:18px;
+		line-height: 60px;
+		.time{
+			font-size:14px;
+			margin-left: 30px;
+			color: $highlight;
+		}
+	}
+	.info{
+		line-height: 30px;
+	}
+}
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.HighTechZoneEnterpriseInfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.HighTechZoneEnterpriseInfoEntity" id="highTechZoneEnterpriseInfoMap">
+        <result property="id" column="id"/>
+        <result property="enterpriseName" column="enterprise_name"/>
+        <result property="organizationCode" column="organization_code"/>
+        <result property="businessLicenseNo" column="business_license_no"/>
+        <result property="taxNo" column="tax_no"/>
+        <result property="esDate" column="es_date"/>
+        <result property="regCap" column="reg_cap"/>
+        <result property="entryDate" column="entry_date"/>
+        <result property="createtime" column="createtime"/>
+        <result property="creditCode" column="credit_code"/>
+        <result property="industryType" column="industry_type"/>
+        <result property="dataState" column="data_state"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="province" column="province"/>
+        <result property="city" column="city"/>
+        <result property="regTime" column="reg_time"/>
+        <result property="tycEnterpriseid" column="tyc_enterpriseId"/>
+        <result property="status" column="status"/>
+        <result property="dataSource" column="data_source"/>
+        <result property="webSite" column="web_site"/>
+        <result property="address" column="address"/>
+        <result property="phones" column="phones"/>
+        <result property="email" column="email"/>
+        <result property="content" column="content"/>
+        <result property="legalPersonName" column="legal_person_name"/>
+        <result property="renameFlag" column="rename_flag"/>
+        <result property="oldName" column="old_name"/>
+        <result property="remark" column="remark"/>
+        <result property="tycUpdateTime" column="tyc_update_time"/>
+        <result property="score" column="score"/>
+        <result property="version" column="version"/>
+        <result property="oldEnterpriseId" column="old_enterprise_id"/>
+        <result property="newName" column="new_name"/>
+        <result property="newEnterpriseId" column="new_enterprise_id"/>
+        <result property="tagList" column="tag_list"/>
+        <result property="historyList" column="history_list"/>
+    </resultMap>
+
+
+</mapper>

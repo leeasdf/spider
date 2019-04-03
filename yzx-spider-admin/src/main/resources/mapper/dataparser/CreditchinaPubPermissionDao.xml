@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.dataparser.dao.CreditchinaPubPermissionDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.dataparser.entity.CreditchinaPubPermissionEntity" id="creditchinaPubPermissionMap">
+        <result property="id" column="id"/>
+        <result property="areaCode" column="area_code"/>
+        <result property="fileId" column="file_id"/>
+        <result property="fingerPrint" column="finger_print"/>
+        <result property="pv" column="pv"/>
+        <result property="roleId" column="role_id"/>
+        <result property="subjectId" column="subject_id"/>
+        <result property="uploadDate" column="upload_date"/>
+        <result property="xkBz" column="xk_bz"/>
+        <result property="xkDfbm" column="xk_dfbm"/>
+        <result property="xkFr" column="xk_fr"/>
+        <result property="xkJdrq" column="xk_jdrq"/>
+        <result property="xkJzq" column="xk_jzq"/>
+        <result property="xkNr" column="xk_nr"/>
+        <result property="xkSjc" column="xk_sjc"/>
+        <result property="xkSplb" column="xk_splb"/>
+        <result property="xkWsh" column="xk_wsh"/>
+        <result property="xkXdr" column="xk_xdr"/>
+        <result property="xkXdrGsdj" column="xk_xdr_gsdj"/>
+        <result property="xkXdrSfz" column="xk_xdr_sfz"/>
+        <result property="xkXdrShxym" column="xk_xdr_shxym"/>
+        <result property="xkXdrSwdj" column="xk_xdr_swdj"/>
+        <result property="xkXdrZdm" column="xk_xdr_zdm"/>
+        <result property="xkXmmc" column="xk_xmmc"/>
+        <result property="xkXzbm" column="xk_xzbm"/>
+        <result property="xkXzjg" column="xk_xzjg"/>
+        <result property="xkYxq" column="xk_yxq"/>
+        <result property="xkZt" column="xk_zt"/>
+        <result property="spiderId" column="spider_id"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="remark" column="remark"/>
+        <result property="dataStatus" column="data_status"/>
+    </resultMap>
+
+
+</mapper>

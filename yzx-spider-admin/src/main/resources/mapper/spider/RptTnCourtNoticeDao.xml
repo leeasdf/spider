@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.RptTnCourtNoticeDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.RptTnCourtNoticeEntity" id="rptTnCourtNoticeMap">
+        <result property="id" column="id"/>
+        <result property="enterpriseId" column="enterprise_id"/>
+        <result property="entName" column="ent_name"/>
+        <result property="publishdate" column="publishdate"/>
+        <result property="party1" column="party1"/>
+        <result property="party2" column="party2"/>
+        <result property="bltntypename" column="bltntypename"/>
+        <result property="courtcode" column="courtcode"/>
+        <result property="content" column="content"/>
+        <result property="creator" column="creator"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updater" column="updater"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="dataState" column="data_state"/>
+        <result property="announceId" column="announce_id"/>
+        <result property="reason" column="reason"/>
+        <result property="bltnno" column="bltnno"/>
+        <result property="bltnstate" column="bltnstate"/>
+        <result property="judgephone" column="judgephone"/>
+        <result property="dealgradename" column="dealgradename"/>
+        <result property="dealgrade" column="dealgrade"/>
+        <result property="province" column="province"/>
+        <result property="bltntype" column="bltntype"/>
+        <result property="showtxtdate" column="showtxtdate"/>
+        <result property="tmpsaversn" column="tmpsaversn"/>
+        <result property="publishpage" column="publishpage"/>
+        <result property="party2str" column="party2Str"/>
+        <result property="tycId" column="tyc_id"/>
+        <result property="judge" column="judge"/>
+        <result property="party1str" column="party1Str"/>
+        <result property="caseno" column="caseno"/>
+        <result property="courtflag" column="courtflag"/>
+        <result property="customno" column="customno"/>
+        <result property="mobilephone" column="mobilephone"/>
+        <result property="companyList" column="company_list"/>
+        <result property="cnId" column="cn_id"/>
+    </resultMap>
+
+
+</mapper>

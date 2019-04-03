@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.EntDrainageCostDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.EntDrainageCostEntity" id="entDrainageCostMap">
+        <result property="id" column="id"/>
+        <result property="companyName" column="company_name"/>
+        <result property="source" column="source"/>
+        <result property="drainageFlag" column="drainage_flag"/>
+        <result property="serialNo" column="serial_no"/>
+        <result property="levyInstitution" column="levy_institution"/>
+        <result property="billingAmount" column="billing_amount"/>
+        <result property="payinAmount" column="payin_amount"/>
+        <result property="parentInstitution" column="parent_institution"/>
+        <result property="type" column="type"/>
+        <result property="year" column="year"/>
+        <result property="quarter" column="quarter"/>
+    </resultMap>
+
+
+</mapper>

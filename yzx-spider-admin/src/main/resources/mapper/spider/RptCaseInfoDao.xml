@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.RptCaseInfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.RptCaseInfoEntity" id="rptCaseInfoMap">
+        <result property="id" column="id"/>
+        <result property="memid" column="memId"/>
+        <result property="enterpriseId" column="enterprise_id"/>
+        <result property="casetime" column="casetime"/>
+        <result property="casereason" column="casereason"/>
+        <result property="caseval" column="caseval"/>
+        <result property="casetype" column="casetype"/>
+        <result property="exesort" column="exesort"/>
+        <result property="caseresult" column="caseresult"/>
+        <result property="pendecno" column="pendecno"/>
+        <result property="pendecissdate" column="pendecissdate"/>
+        <result property="penauth" column="penauth"/>
+        <result property="illegfact" column="illegfact"/>
+        <result property="penbasis" column="penbasis"/>
+        <result property="pentype" column="pentype"/>
+        <result property="penresult" column="penresult"/>
+        <result property="penam" column="penam"/>
+        <result property="penexest" column="penexest"/>
+        <result property="creator" column="creator"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updater" column="updater"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="dataState" column="data_state"/>
+    </resultMap>
+
+
+</mapper>

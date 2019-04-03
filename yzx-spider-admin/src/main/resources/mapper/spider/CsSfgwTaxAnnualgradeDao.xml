@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.CsSfgwTaxAnnualgradeDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.CsSfgwTaxAnnualgradeEntity" id="csSfgwTaxAnnualgradeMap">
+        <result property="isinvalid" column="ISINVALID"/>
+        <result property="lastdate" column="LASTDATE"/>
+        <result property="nsrsbh" column="NSRSBH"/>
+        <result property="nsrmc" column="NSRMC"/>
+        <result property="pjnd" column="PJND"/>
+        <result property="zgswjg" column="ZGSWJG"/>
+        <result property="zjid" column="ZJID"/>
+    </resultMap>
+
+
+</mapper>

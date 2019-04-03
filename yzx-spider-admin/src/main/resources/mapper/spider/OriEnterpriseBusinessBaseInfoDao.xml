@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.OriEnterpriseBusinessBaseInfoDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.OriEnterpriseBusinessBaseInfoEntity" id="oriEnterpriseBusinessBaseInfoMap">
+        <result property="id" column="id"/>
+        <result property="enterpriseId" column="enterprise_id"/>
+        <result property="enterpriseName" column="enterprise_name"/>
+        <result property="oriRegisterNo" column="ori_register_no"/>
+        <result property="registerNo" column="register_no"/>
+        <result property="enterpriseType" column="enterprise_type"/>
+        <result property="subjectIdentityCode" column="subject_identity_code"/>
+        <result property="belongEnterpriseName" column="belong_enterprise_name"/>
+        <result property="belongRegisterNo" column="belong_register_no"/>
+        <result property="belongRelationship" column="belong_relationship"/>
+        <result property="industryCategories" column="industry_categories"/>
+        <result property="industryCode" column="industry_code"/>
+        <result property="permittedOperatingItems" column="permitted_operating_items"/>
+        <result property="generalOperatingItems" column="general_operating_items"/>
+        <result property="businessPeriodBegin" column="business_period_begin"/>
+        <result property="businessPeriodEnd" column="business_period_end"/>
+        <result property="zipCode" column="zip_code"/>
+        <result property="phone" column="phone"/>
+        <result property="email" column="email"/>
+        <result property="belongIndustryCommerceBureau" column="belong_industry_commerce_bureau"/>
+        <result property="creditRating" column="credit_rating"/>
+        <result property="classificationDate" column="classification_date"/>
+        <result property="setUpDate" column="set_up_date"/>
+        <result property="approvalDate" column="approval_date"/>
+        <result property="registrationAuthority" column="registration_authority"/>
+        <result property="enterpriseClassificationCode" column="enterprise_classification_code"/>
+        <result property="enterpriseState" column="enterprise_state"/>
+        <result property="registeredCapital" column="registered_capital"/>
+        <result property="operationScope" column="operation_scope"/>
+        <result property="operationMode" column="operation_mode"/>
+        <result property="operationScopeMode" column="operation_scope_mode"/>
+        <result property="engagedScope" column="engaged_scope"/>
+        <result property="domicileArea" column="domicile_area"/>
+        <result property="domicile" column="domicile"/>
+        <result property="domicileDevelopZone" column="domicile_develop_zone"/>
+        <result property="houseProperty" column="house_property"/>
+        <result property="premisesArea" column="premises_area"/>
+        <result property="premises" column="premises"/>
+        <result property="paidInCapital" column="paid_in_capital"/>
+        <result property="setUpMode" column="set_up_mode"/>
+        <result property="partnershipNo" column="partnership_no"/>
+        <result property="partnersLimitedNo" column="partners_limited_no"/>
+        <result property="partnershipMode" column="partnership_mode"/>
+        <result property="performNo" column="perform_no"/>
+        <result property="employeesNo" column="employees_no"/>
+        <result property="contributionMode" column="contribution_mode"/>
+        <result property="foreignIndustryCode" column="foreign_industry_code"/>
+        <result property="midwestIndustrialCode" column="midwest_industrial_code"/>
+        <result property="projectType" column="project_type"/>
+        <result property="investmentTotalAmount" column="investment_total_amount"/>
+        <result property="investmentTotalAmountCurrency" column="investment_total_amount_currency"/>
+        <result property="investmentTotalAmountUsd" column="investment_total_amount_usd"/>
+        <result property="registeredCapitalUsd" column="registered_capital_usd"/>
+        <result property="registeredCapitalCurrency" column="registered_capital_currency"/>
+        <result property="registeredCapitalCny" column="registered_capital_cny"/>
+        <result property="foreignRegisteredCapitalCurrency" column="foreign_registered_capital_currency"/>
+        <result property="foreignRegisteredCapitalUsd" column="foreign_registered_capital_usd"/>
+        <result property="foreignPaidInCapitalUsd" column="foreign_paid_in_capital_usd"/>
+        <result property="workingCapital" column="working_capital"/>
+        <result property="transformationDate" column="transformation_date"/>
+        <result property="businessType" column="business_type"/>
+        <result property="foreignEnterpriseName" column="foreign_enterprise_name"/>
+        <result property="competentDepartment" column="competent_department"/>
+        <result property="country" column="country"/>
+        <result property="contractProject" column="contract_project"/>
+        <result property="contract projectRemark" column="contract project_remark"/>
+        <result property="outsideHouse" column="outside_house"/>
+        <result property="overseasRegisteredCapital" column="overseas_registered_capital"/>
+        <result property="overseasBusinessScope" column="overseas_business_scope"/>
+        <result property="enterprise nature" column="enterprise nature"/>
+        <result property="overseasSubjectType" column="overseas_subject_type"/>
+        <result property="businessCategory" column="business_category"/>
+        <result property="uniformSocialCreditCode" column="uniform_social_credit_code"/>
+        <result property="belongUniformSocialCreditCode" column="belong_uniform_social_credit_code"/>
+        <result property="principalIdentityCode" column="principal_identity_code"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+
+
+</mapper>

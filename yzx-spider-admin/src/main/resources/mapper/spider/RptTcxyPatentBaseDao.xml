@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.RptTcxyPatentBaseDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.RptTcxyPatentBaseEntity" id="rptTcxyPatentBaseMap">
+        <result property="id" column="id"/>
+        <result property="companyId" column="company_id"/>
+        <result property="title" column="title"/>
+        <result property="mainClassCode" column="main_class_code"/>
+        <result property="type" column="type"/>
+        <result property="classCode" column="class_code"/>
+        <result property="designer" column="designer"/>
+        <result property="address" column="address"/>
+        <result property="summary" column="summary"/>
+        <result property="applicant" column="applicant"/>
+        <result property="patentNumber" column="patent_number"/>
+        <result property="applyDate" column="apply_date"/>
+        <result property="agentOrg" column="agent_org"/>
+        <result property="pubNum" column="pub_num"/>
+        <result property="agent" column="agent"/>
+        <result property="pubDate" column="pub_date"/>
+        <result property="intelPub" column="intel_pub"/>
+        <result property="intelApply" column="intel_apply"/>
+        <result property="intoChinaDate" column="into_china_date"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+
+
+</mapper>

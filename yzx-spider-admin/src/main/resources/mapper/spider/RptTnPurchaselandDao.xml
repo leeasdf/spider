@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.RptTnPurchaselandDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.RptTnPurchaselandEntity" id="rptTnPurchaselandMap">
+        <result property="id" column="id"/>
+        <result property="enterpriseId" column="enterprise_id"/>
+        <result property="entName" column="ent_name"/>
+        <result property="plId" column="pl_id"/>
+        <result property="adminRegion" column="admin_region"/>
+        <result property="elecSupervisorNo" column="elec_supervisor_no"/>
+        <result property="signedDate" column="signed_date"/>
+        <result property="totalArea" column="total_area"/>
+        <result property="location" column="location"/>
+        <result property="assignee" column="assignee"/>
+        <result property="parentCompany" column="parent_company"/>
+        <result property="purpose" column="purpose"/>
+        <result property="supplyWay" column="supply_way"/>
+        <result property="minVolume" column="min_volume"/>
+        <result property="maxVolume" column="max_volume"/>
+        <result property="dealPrice" column="deal_price"/>
+        <result property="startTime" column="start_time"/>
+        <result property="linkUrl" column="link_url"/>
+        <result property="endTime" column="end_time"/>
+        <result property="plCreateTime" column="pl_create_time"/>
+        <result property="plUpdateTime" column="pl_update_time"/>
+        <result property="creator" column="creator"/>
+        <result property="createTime" column="create_time"/>
+        <result property="updater" column="updater"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="dataState" column="data_state"/>
+    </resultMap>
+
+
+</mapper>

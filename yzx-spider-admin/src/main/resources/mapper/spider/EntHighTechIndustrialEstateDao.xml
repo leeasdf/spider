@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.EntHighTechIndustrialEstateDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.EntHighTechIndustrialEstateEntity" id="entHighTechIndustrialEstateMap">
+        <result property="id" column="id"/>
+        <result property="industrialEstateUnit" column="industrial_estate_unit"/>
+        <result property="company" column="company"/>
+        <result property="area" column="area"/>
+        <result property="address" column="address"/>
+        <result property="mainProduct" column="main_product"/>
+        <result property="belongType" column="belong_type"/>
+        <result property="isSublet" column="is_sublet"/>
+        <result property="note" column="note"/>
+        <result property="memId" column="mem_id"/>
+        <result property="enterpriseId" column="enterprise_id"/>
+    </resultMap>
+
+
+</mapper>

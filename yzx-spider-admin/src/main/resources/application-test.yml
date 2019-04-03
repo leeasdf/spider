@@ -1,0 +1,42 @@
+spring:
+    datasource:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driverClassName: com.mysql.jdbc.Driver
+        druid:
+            first:  #����Դ1
+                url: jdbc:mysql://112.74.187.95:3306/tpark_cs_dev?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+                username: root
+                password: Root!@#123
+            second:  #����Դ2
+                url: jdbc:mysql://112.74.187.95:3306/tpark_cs_dev?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+                username: root
+                password: Root!@#123
+            initial-size: 10
+            max-active: 100
+            min-idle: 10
+            max-wait: 60000
+            pool-prepared-statements: true
+            max-pool-prepared-statement-per-connection-size: 20
+            time-between-eviction-runs-millis: 60000
+            min-evictable-idle-time-millis: 300000
+            validation-query: SELECT 1 FROM DUAL
+            test-while-idle: true
+            test-on-borrow: false
+            test-on-return: false
+            stat-view-servlet:
+                enabled: true
+                url-pattern: /druid/*
+                #login-username: admin
+                #login-password: admin
+            filter:
+                stat:
+                    log-slow-sql: true
+                    slow-sql-millis: 1000
+                    merge-sql: true
+                wall:
+                    config:
+                        multi-statement-allow: true
+qichacha:
+  security:
+    key: f7f1d803553b403ca1356b502a71a8f2
+    secretKey: A693C29BB1328A26343EB9B5CD6031E6

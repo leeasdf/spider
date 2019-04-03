@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.CsSfgwAicEJyycmlxxDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.CsSfgwAicEJyycmlxxEntity" id="csSfgwAicEJyycmlxxMap">
+        <result property="isinvalid" column="ISINVALID"/>
+        <result property="lastdate" column="LASTDATE"/>
+        <result property="busexclist" column="BUSEXCLIST"/>
+        <result property="pripid" column="PRIPID"/>
+        <result property="entname" column="ENTNAME"/>
+        <result property="uniscid" column="UNISCID"/>
+        <result property="regno" column="REGNO"/>
+        <result property="lerep" column="LEREP"/>
+        <result property="certype" column="CERTYPE"/>
+        <result property="cerno" column="CERNO"/>
+        <result property="specause" column="SPECAUSE"/>
+        <result property="specausename" column="SPECAUSENAME"/>
+        <result property="abntime" column="ABNTIME"/>
+        <result property="decorg" column="DECORG"/>
+        <result property="decorgname" column="DECORGNAME"/>
+        <result property="ismove" column="ISMOVE"/>
+        <result property="remexcpres" column="REMEXCPRES"/>
+        <result property="remexcpresname" column="REMEXCPRESNAME"/>
+        <result property="remdate" column="REMDATE"/>
+        <result property="ycdecorg" column="YCDECORG"/>
+        <result property="ycdecorgname" column="YCDECORGNAME"/>
+        <result property="zjid" column="ZJID"/>
+    </resultMap>
+
+
+</mapper>

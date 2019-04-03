@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xin.tianchuang.modules.spider.dao.CsSfgwAicInfoetailDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="xin.tianchuang.modules.spider.entity.CsSfgwAicInfoetailEntity" id="csSfgwAicInfoetailMap">
+        <result property="isinvalid" column="ISINVALID"/>
+        <result property="lastdate" column="LASTDATE"/>
+        <result property="entname" column="ENTNAME"/>
+        <result property="oriregno" column="ORIREGNO"/>
+        <result property="regno" column="REGNO"/>
+        <result property="enttype" column="ENTTYPE"/>
+        <result property="ppripid" column="PPRIPID"/>
+        <result property="pentname" column="PENTNAME"/>
+        <result property="pregno" column="PREGNO"/>
+        <result property="hypotaxis" column="HYPOTAXIS"/>
+        <result property="industryphy" column="INDUSTRYPHY"/>
+        <result property="industryco" column="INDUSTRYCO"/>
+        <result property="abuitem" column="ABUITEM"/>
+        <result property="cbuitem" column="CBUITEM"/>
+        <result property="opfrom" column="OPFROM"/>
+        <result property="opto" column="OPTO"/>
+        <result property="postalcode" column="POSTALCODE"/>
+        <result property="tel" column="TEL"/>
+        <result property="email" column="EMAIL"/>
+        <result property="localadm" column="LOCALADM"/>
+        <result property="credlevel" column="CREDLEVEL"/>
+        <result property="assdate" column="ASSDATE"/>
+        <result property="estdate" column="ESTDATE"/>
+        <result property="issblicdate" column="ISSBLICDATE"/>
+        <result property="regorg" column="REGORG"/>
+        <result property="entcat" column="ENTCAT"/>
+        <result property="opstate" column="OPSTATE"/>
+        <result property="regcap" column="REGCAP"/>
+        <result property="opscope" column="OPSCOPE"/>
+        <result property="opform" column="OPFORM"/>
+        <result property="opscoandform" column="OPSCOANDFORM"/>
+        <result property="ptbusscope" column="PTBUSSCOPE"/>
+        <result property="domdistrict" column="DOMDISTRICT"/>
+        <result property="dom" column="DOM"/>
+        <result property="ecotecdevzone" column="ECOTECDEVZONE"/>
+        <result property="domproright" column="DOMPRORIGHT"/>
+        <result property="oplocdistrict" column="OPLOCDISTRICT"/>
+        <result property="promana" column="PROMANA"/>
+        <result property="reccap" column="RECCAP"/>
+        <result property="insform" column="INSFORM"/>
+        <result property="parnum" column="PARNUM"/>
+        <result property="limparnum" column="LIMPARNUM"/>
+        <result property="parform" column="PARFORM"/>
+        <result property="exenum" column="EXENUM"/>
+        <result property="empnum" column="EMPNUM"/>
+        <result property="sconform" column="SCONFORM"/>
+        <result property="forcapindcode" column="FORCAPINDCODE"/>
+        <result property="midpreindcode" column="MIDPREINDCODE"/>
+        <result property="protype" column="PROTYPE"/>
+        <result property="congro" column="CONGRO"/>
+        <result property="congrocur" column="CONGROCUR"/>
+        <result property="congrousd" column="CONGROUSD"/>
+        <result property="regcapusd" column="REGCAPUSD"/>
+        <result property="regcapcur" column="REGCAPCUR"/>
+        <result property="regcaprmb" column="REGCAPRMB"/>
+        <result property="forregcapcur" column="FORREGCAPCUR"/>
+        <result property="forregcapusd" column="FORREGCAPUSD"/>
+        <result property="forreccapusd" column="FORRECCAPUSD"/>
+        <result property="worcap" column="WORCAP"/>
+        <result property="chamecdate" column="CHAMECDATE"/>
+        <result property="opracttype" column="OPRACTTYPE"/>
+        <result property="forentname" column="FORENTNAME"/>
+        <result property="depincha" column="DEPINCHA"/>
+        <result property="country" column="COUNTRY"/>
+        <result property="itemofoporcpro" column="ITEMOFOPORCPRO"/>
+        <result property="conofcontrpro" column="CONOFCONTRPRO"/>
+        <result property="fordom" column="FORDOM"/>
+        <result property="forregecap" column="FORREGECAP"/>
+        <result property="foropscope" column="FOROPSCOPE"/>
+        <result property="sExtEntproperty" column="S_EXT_ENTPROPERTY"/>
+        <result property="foreignbodytype" column="FOREIGNBODYTYPE"/>
+        <result property="manacate" column="MANACATE"/>
+        <result property="uscc" column="USCC"/>
+        <result property="puniscid" column="puniscid"/>
+        <result property="etpsId" column="ETPS_ID"/>
+        <result property="zjid" column="ZJID"/>
+    </resultMap>
+
+
+</mapper>
